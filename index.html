@@ -1,42 +1,88 @@
 <!DOCTYPE html>
 <html lang="ja">
- <head>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>画面上で書けるプロフィール帳</title>
- <link rel="stylesheet" href="style.css">
- <!-- jQueryのCDN -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
- <script src="script.js"></script>
- </head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画面上で書けるプロフィール帳</title>
+
+    <!-- Google フォント -->
+    <!-- よもぎフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+    <!-- はちまるフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <!-- レゲエ One -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+    <!-- 解星　特ミン -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap" rel="stylesheet">
+    <!-- デラゴシック -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <!-- Yuji Syuku -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- だるまどろっぷ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
+    <!-- すらっくさいど -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Slackside+One&display=swap" rel="stylesheet">
+
+    <!-- jQueryのCDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+  </head>
  
- <body>
-  <h1>画面上で書けるプロフィール帳</h1>
-  <div class="typography">
-    <div class="typography-item">
-      <h4>フォント: </h4>
-      <select name="font">
-        <option value="test1">テスト1</option>
-        <option value="test2">テスト2</option>
-        <option value="test3">テスト3</option>
-      </select>
+  <body>
+    <h1>画面上で書けるプロフィール帳</h1>
+    <div class="typography">
+      <div class="typography-item">
+        <h4>フォント: </h4>
+        <select name="font-select">
+          <option value="hand-written" style="font-family: 'Yomogi'" selected>手書き風</option>
+          <option value="cute" style="font-family: 'Hachi Maru Pop'">かわいい</option>
+          <option value="cool" style="font-family: 'Reggae One'">かっこいい</option>
+          <option value="beautiful" style="font-family: 'Kaisei Tokumin'">素敵</option>
+          <option value="powerful" style="font-family: 'Dela Gothic One'">力強い</option>
+          <option value="child" style="font-family: 'Darumadrop One'">こども</option>
+          <option value="adult" style="font-family: 'Yuji Syuku'">大人</option>
+          <option value="dirty" style="font-family: 'Slackside One'">じきたない</option>
+        </select>
+      </div>
+
+      <!-- name, id変更 -->
+      <div class="typography-item">
+        <h4>文字色: </h4>
+        <select name="font-color">
+          <option value="test1">テスト1</option>
+          <option value="test2">テスト2</option>
+          <option value="test3">テスト3</option>
+        </select>
+      </div>
     </div>
 
-    <div class="typography-item">
-      <h4>文字色: </h4>
-      <select name="font-color">
-        <option value="test1">テスト1</option>
-        <option value="test2">テスト2</option>
-        <option value="test3">テスト3</option>
-      </select>
+    <div class="image">
+      <img src="./images/profile-img.jpg" alt="プロフィール帳">
+      <!-- ユーザー記述部分スタート -->
+      <input id="username" type="text" name="username" placeholder="あなたの名前">
+
+      <input id="nickname" type="text" name="nickname" placeholder="あだ名">
     </div>
-  </div>
 
-  <div class="image">
-    <img src="./images/profile-img.jpg" alt="">
-    <input id="username" type="text" name="username" placeholder="あなたの名前">
-  </div>
-
-  <button id="download-btn" type="button">画像をダウンロード</button>
- </body>
+    <!-- 画像ダウンロードボタン -->
+    <button id="download-btn" type="button">画像をダウンロード</button>
+  </body>
 </html>
