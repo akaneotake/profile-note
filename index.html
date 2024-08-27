@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>画面上で書けるプロフィール帳</title>
+ <link rel="stylesheet" href="style.css">
+ <!-- jQueryのCDN -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+ <script src="script.js"></script>
+ </head>
+ 
+ <body>
+  <h1>画面上で書けるプロフィール帳</h1>
+  <div class="typography">
+    <div class="typography-item">
+      <h4>フォント: </h4>
+      <select name="font">
+        <option value="test1">テスト1</option>
+        <option value="test2">テスト2</option>
+        <option value="test3">テスト3</option>
+      </select>
+    </div>
+
+    <div class="typography-item">
+      <h4>文字色: </h4>
+      <select name="font-color">
+        <option value="test1">テスト1</option>
+        <option value="test2">テスト2</option>
+        <option value="test3">テスト3</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="image">
+    <img src="./images/profile-img.jpg" alt="">
+    <input id="username" type="text" name="username" placeholder="あなたの名前">
+  </div>
+
+  <button id="download-btn" type="button">画像をダウンロード</button>
+ </body>
+</html>

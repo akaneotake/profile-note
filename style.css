@@ -1,0 +1,41 @@
+.typography {
+  display: flex;
+}
+
+.typography-item {
+  display: flex;
+  margin-left: 25px;
+}
+
+select {
+  margin-left: 7px;
+}
+
+.image {
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+input {
+  height: 13px;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#username {
+  position: absolute;
+  width: 120px;
+  left: 275px;
+  top: 78px;
+}
+
+#download-btn {
+  float: right;
+  margin-right: 25px;
+}
