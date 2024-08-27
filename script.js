@@ -52,6 +52,16 @@ function selectFont(event) {
   };
 };
 
+// 文字を太字に変更
+function checkBold(event) {
+  const checkbox = event.target;
+  if (checkbox.checked) {
+    $('input').css('font-weight', 'bold');
+  } else {
+    $('input').css('font-weight', 'normal');
+  };
+};
+
 window.onload = function() {
   // resizeFont関数のイベントリスナー
   const input = document.querySelectorAll('input');
@@ -59,7 +69,11 @@ window.onload = function() {
     e.addEventListener('input', resizeFont);
   })
 
-  // fontSelect関数のイベントリスナー
+  // selectFont関数のイベントリスナー
   const fontSelect = document.querySelector('[name="font-select"]');
   fontSelect.addEventListener('change', selectFont);
+
+  // checkBold関数のイベントリスナー
+  const checkbox = document.getElementById('bold');
+  checkbox.addEventListener('change', checkBold);
 };
