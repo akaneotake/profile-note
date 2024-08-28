@@ -5,31 +5,39 @@ function selectFont(event) {
   switch (fontSelect) {
     case 'hand-written':
       $('input').css('font-family', '"Yomogi", cursive');
+      $('textarea').css('font-family', '"Yomogi", cursive');
       break;
     case 'cute':
       $('input').css('font-family', '"Hachi Maru Pop", cursive');
+      $('textarea').css('font-family', '"Hachi Maru Pop", cursive');
       break;
     case 'cool':
       $('input').css('font-family', '"Reggae One", system-ui');
+      $('textarea').css('font-family', '"Reggae One", system-ui');
       break;
     case 'beautiful':
       $('input').css('font-family', '"Kaisei Tokumin", serif');
+      $('textarea').css('font-family', '"Kaisei Tokumin", serif');
       break;
     case 'powerful':
       $('input').css('font-family', '"Dela Gothic One", sans-serif');
+      $('textarea').css('font-family', '"Dela Gothic One", sans-serif');
       break;
     case 'child':
       $('input').css('font-family', '"Darumadrop One", sans-serif');
+      $('textarea').css('font-family', '"Darumadrop One", sans-serif');
       break;
     case 'adult':
       $('input').css('font-family', '"Yuji Syuku", serif');
+      $('textarea').css('font-family', '"Yuji Syuku", serif');
       break;
     case 'dirty':
       $('input').css('font-family', '"Slackside One", cursive');
+      $('textarea').css('font-family', '"Slackside One", cursive');
       break;
     default:
       $('input').css('font-family', '"Yomogi", cursive');
-      console.log("デフォルトフォント");
+      $('textarea').css('font-family', '"Yomogi", cursive');
   };
 };
 
@@ -38,8 +46,10 @@ function checkBold(event) {
   const checkbox = event.target;
   if (checkbox.checked) {
     $('input').css('font-weight', 'bold');
+    $('textarea').css('font-weight', 'bold');
   } else {
     $('input').css('font-weight', 'normal');
+    $('textarea').css('font-weight', 'normal');
   };
 };
 
