@@ -1,4 +1,4 @@
-// フォント変更
+// 文字のフォント変更
 function selectFont(event) {
   const fontSelect = event.target.value;
 
@@ -38,6 +38,57 @@ function selectFont(event) {
     default:
       $('input').css('font-family', '"Yomogi", cursive');
       $('textarea').css('font-family', '"Yomogi", cursive');
+  };
+};
+
+// 文字の色変更
+function selectColor(event) {
+  const colorSelect = event.target.value;
+
+  switch (colorSelect) {
+    case 'black':
+      $('input').css('color', 'black');
+      $('textarea').css('color', 'black');
+      break;
+    case 'red':
+      $('input').css('color', 'red');
+      $('textarea').css('color', 'red');
+      break;
+    case 'blue':
+      $('input').css('color', 'blue');
+      $('textarea').css('color', 'blue');
+      break;
+    case 'aqua':
+      $('input').css('color', '#00BFFF');
+      $('textarea').css('color', '#00BFFF');
+      break;
+    case 'yellow':
+      $('input').css('color', '#FFD700');
+      $('textarea').css('color', '#FFD700');
+      break;
+    case 'green':
+      $('input').css('color', 'green');
+      $('textarea').css('color', 'green');
+      break;
+    case 'lime':
+      $('input').css('color', 'lime');
+      $('textarea').css('color', 'lime');
+      break;
+    case 'purple':
+      $('input').css('color', 'purple');
+      $('textarea').css('color', 'purple');
+      break;
+    case 'orange':
+      $('input').css('color', 'orange');
+      $('textarea').css('color', 'orange');
+      break;
+    case 'pink':
+      $('input').css('color', '#FF1493');
+      $('textarea').css('color', '#FF1493');
+      break;
+    default:
+      $('input').css('color', 'black');
+      $('textarea').css('color', 'black');
   };
 };
 
@@ -87,6 +138,10 @@ window.onload = function() {
   // selectFont関数のイベントリスナー
   const fontSelect = document.querySelector('[name="font-select"]');
   fontSelect.addEventListener('change', selectFont);
+
+  // selectColor関数のイベントリスナー
+  const colorSelect = document.querySelector('[name="color-select"]');
+  colorSelect.addEventListener('change', selectColor);
 
   // checkBold関数のイベントリスナー
   const checkbox = document.getElementById('bold');
