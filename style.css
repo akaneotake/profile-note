@@ -35,6 +35,16 @@ input {
   font-family: "Yomogi", cursive;
 }
 
+textarea {
+  resize: none;
+  border: none;
+  background-color: transparent;
+  font-family: "Yomogi", cursive;
+  text-align: center;
+  line-height: 1;
+}
+
+/* 左上input */
 #username {
   position: absolute;
   width: 120px;
@@ -49,6 +59,17 @@ input {
   top: 150px;
 }
 
+/* 左上textarea */
+.leftup {
+  width: 145px;
+  height: 45px;
+}
+
+#hobby {
+  position: absolute;
+  left: 75px;
+  top: 263px;
+}
 
 
 #download-btn {

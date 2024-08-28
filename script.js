@@ -1,22 +1,3 @@
-// inputへの文字入力量によってフォントサイズを変更
-function resizeFont(event) {
-  const input = event.target;
-  let size = 16;
-
-  if (input.offsetWidth < input.scrollWidth) {
-    for (
-      size;
-      input.offsetWidth < input.scrollWidth;
-      size -= 2
-    ) {
-      input.style.fontSize = size + "px";
-    }
-  } else if (input.value === '') {
-    size = 16;
-    input.style.fontSize = size + "px";
-  };
-};
-
 // フォント変更
 function selectFont(event) {
   const fontSelect = event.target.value;
@@ -62,13 +43,37 @@ function checkBold(event) {
   };
 };
 
-window.onload = function() {
-  // resizeFont関数のイベントリスナー
-  const input = document.querySelectorAll('input');
-  input.forEach(function(e) {
-    e.addEventListener('input', resizeFont);
-  })
+// inputへの文字入力量によってフォントサイズ変更
+function resizeInput(event) {
+  const input = event.target;
+  let size = 16;
 
+  if (input.offsetWidth < input.scrollWidth) {
+    for (
+      size;
+      input.offsetWidth < input.scrollWidth;
+      size -= 2
+    ) {
+      input.style.fontSize = size + "px";
+    }
+  } else if (input.value === '') {
+    size = 16;
+    input.style.fontSize = size + "px";
+  };
+};
+
+// textareaの行数制限
+function rowsLimit(event) {
+  const textarea = event.target;
+  const rows = textarea.value.split(/\r|\r\n|\n/);
+  const rowsCount = rows.length;
+  
+  if (rowsCount === 3 && event.key === 'Enter') {  
+    event.preventDefault();
+  };  
+};
+
+window.onload = function() {
   // selectFont関数のイベントリスナー
   const fontSelect = document.querySelector('[name="font-select"]');
   fontSelect.addEventListener('change', selectFont);
@@ -76,4 +81,17 @@ window.onload = function() {
   // checkBold関数のイベントリスナー
   const checkbox = document.getElementById('bold');
   checkbox.addEventListener('change', checkBold);
+
+  // resizeInput関数のイベントリスナー
+  const input = document.querySelectorAll('input');
+  input.forEach(function(e) {
+    e.addEventListener('input', resizeInput);
+  });
+
+  // resizeTextarea関数のイベントリスナー
+  const textarea = document.querySelectorAll('textarea');
+  textarea.forEach(function(e) {
+    e.addEventListener('keydown', rowsLimit);
+  });
+
 };
