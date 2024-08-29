@@ -42,6 +42,8 @@
 
     <!-- jQueryのCDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- html2canvas -->
+    <script src="html2canvas.min.js"></script>
 
     <script src="script.js"></script>
   </head>
@@ -85,7 +87,7 @@
 
     </div>
 
-    <div class="image">
+    <div id="image">
       <img src="./images/profile-img.jpg" alt="プロフィール帳">
       <!-- ユーザー記述部分スタート -->
       <input id="username" type="text" name="username" placeholder="あなたの名前">
@@ -102,6 +104,18 @@
     </div>
 
     <!-- 画像ダウンロードボタン -->
-    <button id="download-btn" type="button">画像をダウンロード</button>
+    <button id="download-btn" type="button">♡画像プレビューを読み込む♡</button>
+
+    <img src="" id="result" alt="" />
+    <!--画像のプレビューを表示するimg-->
+
+    <a href="" id="plotter-img" download="html2canvas.png">ダウンロード</a>
+    <!--ダウンロードリンクを設定するaタグ-->
+
+
+
+
+    <!-- あとで消す！！！ -->
+    <div class="dummy"></div>
   </body>
 </html>

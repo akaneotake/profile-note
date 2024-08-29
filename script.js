@@ -134,6 +134,20 @@ function rowsLimit(event) {
   };  
 };
 
+// downloadImg
+function downloadImg(event) {
+  html2canvas(document.getElementById("image")).then(canvas => {
+    console.log(canvas);
+    const imageURL = canvas.toDataURL();
+    console.log(imageURL);
+
+    document.getElementById('result').setAttribute("src", canvas.toDataURL());
+    document.getElementById("plotter-img").href = imageData;
+
+    //document.body.appendChild(canvas)
+  });
+};
+
 window.onload = function() {
   // selectFont関数のイベントリスナー
   const fontSelect = document.querySelector('[name="font-select"]');
@@ -158,5 +172,9 @@ window.onload = function() {
   textarea.forEach(function(e) {
     e.addEventListener('keydown', rowsLimit);
   });
+
+  // ボタン
+  const btn = document.getElementById('download-btn');
+  btn.addEventListener('click', downloadImg);
 
 };

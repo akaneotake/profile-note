@@ -71,8 +71,20 @@ textarea {
   top: 263px;
 }
 
-
 #download-btn {
-  float: right;
-  margin-right: 25px;
+  display: block;
+  font-family: "Yomogi", cursive;
+  font-weight: bold;
+  font-size: 30px;
+  border: double;
+  border-radius: 10px;
+  border-color: blueviolet;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+
+
+.dummy {
+  height: 500px;
 }
