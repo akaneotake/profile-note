@@ -136,7 +136,7 @@ function rowsLimit(event) {
 
 // previewImg
 function previewImg(event) {
-  html2canvas(document.getElementById("image"), {useCORS: true, scale: 1}).then(canvas => {
+  html2canvas(document.getElementById("image")).then(canvas => {
     const imageURL = canvas.toDataURL();
 
     document.getElementById('preview').setAttribute("src", canvas.toDataURL());

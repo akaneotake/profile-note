@@ -18,14 +18,14 @@ select {
   font-weight: bold;
 }
 
-.image {
+#image {
   position: relative;
 }
 
-/*img {
+#image > img {
   width: 1170px;
   height: 845px;
-}*/
+}
 
 input {
   height: 18px;
