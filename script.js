@@ -134,16 +134,18 @@ function rowsLimit(event) {
   };  
 };
 
-// downloadImg
-function downloadImg(event) {
+// previewImg
+function previewImg(event) {
   html2canvas(document.getElementById("image")).then(canvas => {
-    console.log(canvas);
+    console.log("canvasデータ: ",canvas);
     const imageURL = canvas.toDataURL();
-    console.log(imageURL);
+    console.log("画像URL: ", imageURL);
 
-    document.getElementById('result').setAttribute("src", canvas.toDataURL());
-    document.getElementById("plotter-img").href = imageData;
+    document.getElementById('preview').setAttribute("src", canvas.toDataURL());
+    document.getElementById("img-link").href = imageURL;
 
+    document.getElementById('preview').style.display = "block";
+    
     //document.body.appendChild(canvas)
   });
 };
@@ -174,7 +176,8 @@ window.onload = function() {
   });
 
   // ボタン
-  const btn = document.getElementById('download-btn');
-  btn.addEventListener('click', downloadImg);
+  const btn = document.getElementById('preview-btn');
+  btn.addEventListener('click', previewImg);
+
 
 };

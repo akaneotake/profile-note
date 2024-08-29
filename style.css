@@ -71,7 +71,7 @@ textarea {
   top: 263px;
 }
 
-#download-btn {
+.btn {
   display: block;
   font-family: "Yomogi", cursive;
   font-weight: bold;
@@ -79,8 +79,21 @@ textarea {
   border: double;
   border-radius: 10px;
   border-color: blueviolet;
+  box-shadow: 4px 4px gray;
   margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
   padding: 10px;
+}
+
+.btn:active {
+  position: relative;
+  box-shadow: none;
+  top: 4px;
+}
+
+#preview {
+  display: none;
 }
 
 
