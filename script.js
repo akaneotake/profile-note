@@ -136,10 +136,8 @@ function rowsLimit(event) {
 
 // previewImg
 function previewImg(event) {
-  html2canvas(document.getElementById("image")).then(canvas => {
-    console.log("canvasデータ: ",canvas);
+  html2canvas(document.getElementById("image"), {useCORS: true, scale: 1}).then(canvas => {
     const imageURL = canvas.toDataURL();
-    console.log("画像URL: ", imageURL);
 
     document.getElementById('preview').setAttribute("src", canvas.toDataURL());
     document.getElementById("img-link").href = imageURL;

@@ -22,10 +22,10 @@ select {
   position: relative;
 }
 
-img {
+/*img {
   width: 1170px;
   height: 845px;
-}
+}*/
 
 input {
   height: 18px;
@@ -94,6 +94,7 @@ textarea {
 
 #preview {
   display: none;
+  text-align: center;
 }
 
 
