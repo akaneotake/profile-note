@@ -81,9 +81,10 @@
         </select>
       </div>
 
-      <div class="typography-item">
-        <input id="bold" type="checkbox" name="bold" value="bold"><span style="font-weight: bold">文字を太字にする</span>
-      </div>
+      <label class="typography-item">
+        <input id="bold" type="checkbox" name="bold" value="bold">
+        <span>文字を太字にする</span>
+      </label>
 
     </div>
 
@@ -91,8 +92,17 @@
       <img src="./images/profile-img.jpg" alt="プロフィール帳">
       <!-- ユーザー記述部分スタート -->
       <input id="username" type="text" name="username" placeholder="あなたの名前">
+      
+      <input id="birth-year" type="text" name="birth-year" placeholder="西暦">
+      <input id="birth-month" type="text" name="birth-month" placeholder="何">
+      <input id="birth-day" type="text" name="birth-day" placeholder="何">
+      <input id="constellation" type="text" name="constellation" placeholder=" 星">
 
-      <input id="nickname" type="text" name="nickname" placeholder="あだ名">
+      <input id="blood-type" type="text" name="blood-type" placeholder=" 何">
+      <input id="nickname" type="text" name="nickname" placeholder=" あだ名">
+      <input id="character" type="text" name="character" placeholder=" こんな感じ">
+      <input id="day-off" type="text" name="day-off" placeholder=" こーんなこと">
+      
 
 
 
@@ -106,7 +116,7 @@
     <!-- 画像ダウンロード -->
     <button id="preview-btn" class="btn" type="button">♡画像プレビューを読み込む♡</button>
 
-    <div>
+    <div class="center">
       <img src="" id="preview" alt="プロフィール帳のプレビュー" />
     </div>
 

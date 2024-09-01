@@ -10,12 +10,17 @@ body {
   display: flex;
   align-items: center;
   margin-left: 25px;
+  font-weight: bold;
 }
 
 select {
   margin-left: 7px;
   font-family: 'Yomogi';
   font-weight: bold;
+}
+
+label span {
+  padding-left: 23px;
 }
 
 #image {
@@ -28,6 +33,7 @@ select {
 }
 
 input {
+  position: absolute;
   height: 18px;
   border: none;
   background-color: transparent;
@@ -36,6 +42,7 @@ input {
 }
 
 textarea {
+  position: absolute;
   resize: none;
   border: none;
   background-color: transparent;
@@ -46,17 +53,57 @@ textarea {
 
 /* 左上input */
 #username {
-  position: absolute;
   width: 120px;
   left: 240px;
   top: 65px;
 }
 
+#birth-year {
+  width: 45px;
+  left: 78px;
+  top: 93px;
+}
+
+#birth-month {
+  width: 20px;
+  left: 145px;
+  top: 93px;
+}
+
+#birth-day {
+  width: 20px;
+  left: 189px;
+  top: 93px;
+}
+
+#constellation {
+  width: 50px;
+  left: 285px;
+  top: 93px;
+}
+
+#blood-type {
+  width: 35px;
+  left: 137px;
+  top: 120px;
+}
+
 #nickname {
-  position: absolute;
   width: 120px;
   left: 170px;
   top: 150px;
+}
+
+#character {
+  width: 150px;
+  left: 138px;
+  top: 178px;
+}
+
+#day-off {
+  width: 165px;
+  left: 152px;
+  top: 208px;
 }
 
 /* 左上textarea */
@@ -66,10 +113,11 @@ textarea {
 }
 
 #hobby {
-  position: absolute;
   left: 75px;
   top: 263px;
 }
+
+
 
 .btn {
   display: block;
@@ -92,9 +140,15 @@ textarea {
   top: 4px;
 }
 
+.center {
+  text-align: center;
+}
+
 #preview {
   display: none;
-  text-align: center;
+  /* ここ追加して上手く動くかチェック */
+  margin: 0;
+  padding: 0;
 }
 
 
