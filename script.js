@@ -134,7 +134,7 @@ function rowsLimit(event) {
   };  
 };
 
-// previewImg
+// スクリーンショット
 function previewImg(event) {
   html2canvas(document.getElementById("image")).then(canvas => {
     const imageURL = canvas.toDataURL();
