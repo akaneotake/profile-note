@@ -19,8 +19,12 @@ select {
   font-weight: bold;
 }
 
+/* ここクラス名つけた方がいい？ */
 label span {
-  padding-left: 23px;
+  position:relative;
+  font-weight: normal;
+  padding-left: 22px;
+  top:-2px; 
 }
 
 #image {
@@ -34,11 +38,13 @@ label span {
 
 input {
   position: absolute;
-  height: 18px;
+  height: 22px;
   border: none;
   background-color: transparent;
-  font-size: 16px;
   font-family: "Yomogi", cursive;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
 }
 
 textarea {
@@ -47,67 +53,104 @@ textarea {
   border: none;
   background-color: transparent;
   font-family: "Yomogi", cursive;
+  font-weight: bold;
   text-align: center;
   line-height: 1;
 }
 
+.text-small {
+  height: 18px;
+  font-size: 16px;
+}
+
 /* 左上input */
+#date-year {
+  width: 37px;
+  left: 418px;
+  top: 21px;
+}
+
+#date-month {
+  width: 20px;
+  left: 478px;
+  top: 21px;
+}
+
+#date-day {
+  width: 20px;
+  left: 520px;
+  top: 21px;
+}
+
 #username {
-  width: 120px;
-  left: 240px;
-  top: 65px;
+  width: 123px;
+  left: 235px;
+  top: 62px;
 }
 
 #birth-year {
   width: 45px;
-  left: 78px;
-  top: 93px;
+  left: 75px;
+  top: 90px;
 }
 
 #birth-month {
   width: 20px;
-  left: 145px;
-  top: 93px;
+  left: 143px;
+  top: 90px;
 }
 
 #birth-day {
   width: 20px;
-  left: 189px;
-  top: 93px;
+  left: 188px;
+  top: 90px;
 }
 
 #constellation {
-  width: 50px;
-  left: 285px;
-  top: 93px;
+  width: 52px;
+  left: 284px;
+  top: 90px;
 }
 
 #blood-type {
   width: 35px;
   left: 137px;
-  top: 120px;
+  top: 118px;
 }
 
 #nickname {
-  width: 120px;
-  left: 170px;
-  top: 150px;
+  width: 122px;
+  left: 167px;
+  top: 146px;
 }
 
 #character {
   width: 150px;
   left: 138px;
-  top: 178px;
+  top: 175px;
 }
 
 #day-off {
   width: 165px;
   left: 152px;
-  top: 208px;
+  top: 205px;
+}
+
+/* 左上右のinput（文字小） */
+#twitter {
+  width: 84px;
+  left: 474px;
+  top: 193px;
+}
+
+#instagram {
+  width: 76px;
+  left: 483px;
+  top: 212px;
 }
 
 /* 左上textarea */
-.leftup {
+.leftup-textarea {
   width: 145px;
   height: 45px;
 }
@@ -115,6 +158,28 @@ textarea {
 #hobby {
   left: 75px;
   top: 263px;
+}
+
+/* 左上右のinput */
+.leftup-input {
+  width: 100px;
+  left: 468px;
+}
+
+#birthplace {
+  top: 265px;
+}
+
+#siblings {
+  top: 290px;
+}
+
+#user-height {
+  top: 318px;
+}
+
+#shoe-size {
+  top: 343px;
 }
 
 
@@ -142,6 +207,9 @@ textarea {
 
 .center {
   text-align: center;
+  /* ここ追加して上手く動くかチェック */
+  margin: 0;
+  padding: 0;
 }
 
 #preview {

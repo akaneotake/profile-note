@@ -96,29 +96,29 @@ function selectColor(event) {
 function checkBold(event) {
   const checkbox = event.target;
   if (checkbox.checked) {
-    $('input').css('font-weight', 'bold');
-    $('textarea').css('font-weight', 'bold');
-  } else {
     $('input').css('font-weight', 'normal');
     $('textarea').css('font-weight', 'normal');
+  } else {
+    $('input').css('font-weight', 'bold');
+    $('textarea').css('font-weight', 'bold');
   };
 };
 
 // inputへの文字入力量によってフォントサイズ変更
 function resizeInput(event) {
   const input = event.target;
-  let size = 16;
+  let size = 20;
 
   if (input.offsetWidth < input.scrollWidth) {
     for (
       size;
       input.offsetWidth < input.scrollWidth;
-      size -= 2
+      size -= 1
     ) {
       input.style.fontSize = size + "px";
     }
   } else if (input.value === '') {
-    size = 16;
+    size = 20;
     input.style.fontSize = size + "px";
   };
 };
@@ -158,7 +158,7 @@ window.onload = function() {
   colorSelect.addEventListener('change', selectColor);
 
   // checkBold関数のイベントリスナー
-  const checkbox = document.getElementById('bold');
+  const checkbox = document.getElementById('not-bold');
   checkbox.addEventListener('change', checkBold);
 
   // resizeInput関数のイベントリスナー

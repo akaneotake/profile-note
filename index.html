@@ -82,8 +82,8 @@
       </div>
 
       <label class="typography-item">
-        <input id="bold" type="checkbox" name="bold" value="bold">
-        <span>文字を太字にする</span>
+        <input id="not-bold" type="checkbox" name="not-bold" value="not-bold">
+        <span>文字を細くする</span>
       </label>
 
     </div>
@@ -91,23 +91,34 @@
     <div id="image">
       <img src="./images/profile-img.jpg" alt="プロフィール帳">
       <!-- ユーザー記述部分スタート -->
+      <input id="date-year" type="text" name="date-year" placeholder="年">
+      <input id="date-month" type="text" name="date-month" placeholder="月">
+      <input id="date-day" type="text" name="date-day" placeholder="日">
+      
       <input id="username" type="text" name="username" placeholder="あなたの名前">
       
       <input id="birth-year" type="text" name="birth-year" placeholder="西暦">
       <input id="birth-month" type="text" name="birth-month" placeholder="何">
       <input id="birth-day" type="text" name="birth-day" placeholder="何">
-      <input id="constellation" type="text" name="constellation" placeholder=" 星">
+      <input id="constellation" type="text" name="constellation" placeholder="星">
 
-      <input id="blood-type" type="text" name="blood-type" placeholder=" 何">
-      <input id="nickname" type="text" name="nickname" placeholder=" あだ名">
-      <input id="character" type="text" name="character" placeholder=" こんな感じ">
-      <input id="day-off" type="text" name="day-off" placeholder=" こーんなこと">
-      
+      <input id="blood-type" type="text" name="blood-type" placeholder="何">
+      <input id="nickname" type="text" name="nickname" placeholder="あだ名">
+      <input id="character" type="text" name="character" placeholder="こんな感じ">
+      <input id="day-off" type="text" name="day-off" placeholder="こーんなこと">
 
-
+      <!-- 左上右のinput（文字小） -->
+      <input id="twitter" class="text-small" type="text" name="twitter" placeholder="@twitter">
+      <input id="instagram" class="text-small" type="text" name="instagram" placeholder="@インスタ">
 
       <!-- 左上のtextarea -->
-      <textarea id="hobby" class="leftup" maxlength="30" placeholder="ここに趣味をかいてね"></textarea>
+      <textarea id="hobby" class="leftup-textarea" maxlength="30" placeholder="ここに趣味をかいてね"></textarea>
+
+      <!-- 左上右のinput -->
+      <input id="birthplace" class="leftup-input text-small" type="text" name="birthplace" placeholder="どこ生まれ？">
+      <input id="siblings" class="leftup-input text-small" type="text" name="siblings" placeholder="兄弟姉妹">
+      <input id="user-height" class="leftup-input text-small" type="text" name="user-height" placeholder="何センチ？">
+      <input id="shoe-size" class="leftup-input text-small" type="text" name="shoe-size" placeholder="足何センチ？">
 
 
 
