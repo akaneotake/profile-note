@@ -1,3 +1,13 @@
+/* 変化をチェック */
+.body {
+  max-width: 1170px;
+  max-height: 845px;
+}
+
+h1, h4, span {
+  font-family: "Yomogi", cursive;
+}
+
 .typography {
   display: flex;
 }
@@ -20,7 +30,7 @@ label span {
   position:relative;
   font-weight: normal;
   padding-left: 22px;
-  top:-2px; 
+  top: -1px; 
 }
 
 #image {
@@ -40,7 +50,7 @@ input {
   font-family: "Yomogi", cursive;
   font-size: 20px;
   font-weight: bold;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 textarea {
@@ -50,7 +60,7 @@ textarea {
   background-color: transparent;
   font-family: "Yomogi", cursive;
   font-weight: bold;
-  text-align: center;
+  /*text-align: center;*/
   line-height: 1;
 }
 
@@ -130,6 +140,40 @@ textarea {
   width: 165px;
   left: 152px;
   top: 205px;
+}
+
+/* アイコン画像アップロード */
+#user-icon-preview {
+  display: none;
+  position: absolute;
+  border: solid 1px;
+  border-radius: 10px;
+  width: 125px !important;
+  height: 126px !important;
+  object-fit: cover;
+  left: 430px;
+  top: 65px;
+}
+
+#user-icon-choose::file-selector-button {
+  display: block;
+  border: 0;
+  background-color: transparent;
+  font-family: "Yomogi", cursive;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0 auto;
+  line-height: 124px;
+}
+
+#user-icon-choose {
+  display: block;
+  border: solid 1px;
+  border-radius: 10px;
+  width: 123px;
+  height: 124px;
+  left: 430px;
+  top: 65px;
 }
 
 /* 左上右のinput（文字小） */

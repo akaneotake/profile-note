@@ -134,6 +134,23 @@ function rowsLimit(event) {
   };  
 };
 
+// アイコン画像のプレビュー表示
+function showIconPreview(event) {
+  const file = event.target.files;
+  const iconPreview = document.getElementById('user-icon-preview');
+  const iconChoose = document.getElementById('user-icon-choose');
+
+  if (file) {
+    iconPreview.setAttribute('src', URL.createObjectURL(file[0]));
+    iconPreview.style.display = 'block';
+    iconChoose.style.opacity = 0;
+
+  } else {
+    iconPreview.style.display = 'none';
+    iconChoose.style.opacity = 1;
+  }
+};
+
 // スクリーンショット
 function previewImg(event) {
   html2canvas(document.getElementById("image")).then(canvas => {
@@ -148,32 +165,37 @@ function previewImg(event) {
   });
 };
 
+// イベントリスナー
 window.onload = function() {
-  // selectFont関数のイベントリスナー
+  // selectFont関数
   const fontSelect = document.querySelector('[name="font-select"]');
   fontSelect.addEventListener('change', selectFont);
 
-  // selectColor関数のイベントリスナー
+  // selectColor関数
   const colorSelect = document.querySelector('[name="color-select"]');
   colorSelect.addEventListener('change', selectColor);
 
-  // checkBold関数のイベントリスナー
+  // checkBold関数
   const checkbox = document.getElementById('not-bold');
   checkbox.addEventListener('change', checkBold);
 
-  // resizeInput関数のイベントリスナー
+  // resizeInput関数
   const input = document.querySelectorAll('input');
   input.forEach(function(e) {
     e.addEventListener('input', resizeInput);
   });
 
-  // resizeTextarea関数のイベントリスナー
+  // resizeTextarea関数
   const textarea = document.querySelectorAll('textarea');
   textarea.forEach(function(e) {
     e.addEventListener('keydown', rowsLimit);
   });
 
-  // ボタン
+  // showIconPreview関数
+  const iconChoose = document.getElementById('user-icon-choose');
+  iconChoose.addEventListener('change', showIconPreview);
+
+  // previewImg関数
   const btn = document.getElementById('preview-btn');
   btn.addEventListener('click', previewImg);
 
