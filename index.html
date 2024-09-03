@@ -108,7 +108,7 @@
       <input id="day-off" type="text" name="day-off" placeholder="こーんなこと">
 
       <!-- アイコン画像アップロード --> 
-      <img id="user-icon-preview" src="" alt="アイコン画像">    
+      <img id="user-icon-preview" src="" alt="アイコン画像" style="object-fit:cover;">    
       <input id="user-icon-choose" type="file" name="user-icon" accept="image/*">
       
       <!-- 左上右のinput（文字小） -->
@@ -149,10 +149,23 @@
       <input id="f-book" class="leftmiddle-my-favorites font15px" type="text" name="f-book" placeholder="好きな本">
 
       <!-- 左下のinput(BEST3) -->
-      <input id="best3-thema" class="font27px" type="text" name="best3-thema" placeholder="ベスト3♡">
+      <input id="best3-thema" class="font27px" type="text" name="best3-thema" placeholder="ベスト3">
       <input id="best3-1" class="leftdown-best3 font27px" type="text" name="best3-1" placeholder="1位♡">
       <input id="best3-2" class="leftdown-best3 font27px" type="text" name="best3-2" placeholder="2位♡">
       <input id="best3-3" class="leftdown-best3 font27px" type="text" name="best3-3" placeholder="3位♡">
+
+      <!-- 左下のtextarea -->
+      <textarea id="present-you-like" class="leftdown-textarea" maxlength="21" placeholder="嬉しいプレゼント"></textarea>
+      <textarea id="want-to-challenge" class="leftdown-textarea" maxlength="21" placeholder="チャレンジ"></textarea>
+      <textarea id="present-you-want" class="leftdown-textarea" maxlength="21" placeholder="欲しいプレゼント"></textarea>
+      <textarea id="good-memory" class="leftdown-textarea" maxlength="21" placeholder="いい思い出"></textarea>
+
+      <!-- 右上のtextarea（if） -->
+      <textarea id="if-reborn" class="rightup-textarea" maxlength="21" placeholder="何になりたい？"></textarea>
+      <textarea id="if-magic" class="rightup-textarea" maxlength="21" placeholder="魔法が使えたら？"></textarea>
+      <textarea id="if-a-month-free" class="rightup-textarea" maxlength="21" placeholder="1ヵ月休みなら？"></textarea>
+      <textarea id="if-3million" class="rightup-textarea" maxlength="21" placeholder="300万あったら？"></textarea>
+
 
     </div>
 
