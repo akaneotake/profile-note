@@ -45,6 +45,8 @@ label span {
 input {
   position: absolute;
   height: 22px;
+  /* line-height変えたら表示変わる？ */
+  line-height: 1rem;
   border: none;
   background-color: transparent;
   font-family: "Yomogi", cursive;
@@ -60,7 +62,8 @@ textarea {
   background-color: transparent;
   font-family: "Yomogi", cursive;
   font-weight: bold;
-  /*text-align: center;*/
+  /* 中央寄せしたらプレビューズレる？ */
+  text-align: center;
   line-height: 1;
 }
 
@@ -200,6 +203,21 @@ textarea {
   top: 263px;
 }
 
+#skill {
+  left: 228px;
+  top: 263px;
+}
+
+#boom {
+  left: 75px;
+  top: 330px;
+}
+
+#occupation {
+  left: 228px;
+  top: 330px;
+}
+
 /* 左上右のinput */
 .leftup-input {
   width: 100px;
@@ -222,7 +240,88 @@ textarea {
   top: 343px;
 }
 
+/* 左中のinput */
+.leftmiddle-input {
+  width: 275px;
+  left: 300px;
+}
 
+#feel-adult {
+  top: 401px;
+}
+
+#feel-happy {
+  top: 426px;
+}
+
+#favorit-word {
+  top: 454px;
+}
+
+/* 左中のinput(My favorites) */
+.leftmiddle-my-favorites {
+  width: 108px;
+}
+
+#f-food {
+  left: 86px;
+  top: 540px;
+}
+
+#f-drink {
+  left: 204px;
+  top: 540px;
+}
+
+#f-place {
+  left: 324px;
+  top: 540px;
+} 
+
+#f-character {
+  left: 443px;
+  top: 540px;
+}
+
+#f-color {
+  left: 86px;
+  top: 575px;
+}
+
+#f-pattern {
+  left: 204px;
+  top: 575px;
+}
+
+#f-fragrance {
+  left: 324px;
+  top: 575px;
+}
+
+#f-brand {
+  left: 443px;
+  top: 575px;
+}
+
+#f-animal {
+  left: 86px;
+  top: 610px;
+}
+
+#f-sports {
+  left: 204px;
+  top: 610px;
+}
+
+#f-music {
+  left: 324px;
+  top: 610px;
+}
+
+#f-book {
+  left: 443px;
+  top: 610px;
+}
 
 .btn {
   display: block;
@@ -247,4 +346,7 @@ textarea {
 
 #preview {
   display: none;
+  /* paddingとmarginゼロでズレ治る？ */
+  padding: 0;
+  margin: 0;
 }

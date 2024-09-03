@@ -108,18 +108,35 @@ function checkBold(event) {
 function resizeInput(event) {
   const input = event.target;
   let size = 20;
+  let sizeS = 15;
 
-  if (input.offsetWidth < input.scrollWidth) {
-    for (
-      size;
-      input.offsetWidth < input.scrollWidth;
-      size -= 1
-    ) {
+  if (input.classList.contains('font15px') == true) {
+    if (input.offsetWidth < input.scrollWidth) {
+      for (
+        sizeS;
+        input.offsetWidth < input.scrollWidth;
+        sizeS -= 1
+      ) {
+        input.style.fontSize = sizeS + "px";
+      }
+    } else if (input.value === '') {
+      sizeS = 15;
+      input.style.fontSize = sizeS + "px";
+    };
+  } 
+  else {
+    if (input.offsetWidth < input.scrollWidth) {
+      for (
+        size;
+        input.offsetWidth < input.scrollWidth;
+        size -= 1
+      ) {
+        input.style.fontSize = size + "px";
+      }
+    } else if (input.value === '') {
+      size = 20;
       input.style.fontSize = size + "px";
-    }
-  } else if (input.value === '') {
-    size = 20;
-    input.style.fontSize = size + "px";
+    };
   };
 };
 
