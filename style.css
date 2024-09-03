@@ -1,4 +1,4 @@
-/* 変化をチェック */
+/* ☆彡変化をチェック */
 .body {
   max-width: 1170px;
   max-height: 845px;
@@ -25,7 +25,7 @@ select {
   font-weight: bold;
 }
 
-/* ここクラス名つけた方がいい？ */
+/* ☆彡ここクラス名つけた方がいい？ */
 label span {
   position:relative;
   font-weight: normal;
@@ -35,6 +35,9 @@ label span {
 
 #image {
   position: relative;
+  /* ☆彡これで変わる？ */
+  width: 1170px;
+  height: 845px;
 }
 
 #image > img {
@@ -45,14 +48,15 @@ label span {
 input {
   position: absolute;
   height: 22px;
-  /* line-height変えたら表示変わる？ */
-  line-height: 1rem;
+  /* ☆彡line-height変えたら表示変わる？ 
+  line-height: 1rem; */
   border: none;
   background-color: transparent;
   font-family: "Yomogi", cursive;
   font-size: 20px;
   font-weight: bold;
-  /*text-align: center;*/
+  /* ☆彡中央寄せしたらプレビューズレる？ */
+  text-align: center;
 }
 
 textarea {
@@ -62,7 +66,7 @@ textarea {
   background-color: transparent;
   font-family: "Yomogi", cursive;
   font-weight: bold;
-  /* 中央寄せしたらプレビューズレる？ */
+  /* ☆彡中央寄せしたらプレビューズレる？ */
   text-align: center;
   line-height: 1;
 }
@@ -70,6 +74,11 @@ textarea {
 .font15px {
   height: 17px;
   font-size: 15px;
+}
+
+.font27px {
+  height: 29px;
+  font-size: 27px;
 }
 
 /* 左上input */
@@ -153,7 +162,8 @@ textarea {
   border-radius: 10px;
   width: 125px !important;
   height: 126px !important;
-  object-fit: cover;
+  /* !importantでプレビュー揃う？ */
+  object-fit: cover !important;
   left: 430px;
   top: 65px;
 }
@@ -323,6 +333,30 @@ textarea {
   top: 610px;
 }
 
+/* 左下のinput(BEST3) */
+#best3-thema {
+  width: 134px;
+  left: 88px;
+  top: 654px;
+}
+
+.leftdown-best3 {
+  width: 148px;
+  left: 94px;
+}
+
+#best3-1 {
+  top: 696px;
+}
+
+#best3-2 {
+  top: 732px;
+}
+
+#best3-3 {
+  top: 768px;
+}
+
 .btn {
   display: block;
   font-family: "Yomogi", cursive;
@@ -346,7 +380,4 @@ textarea {
 
 #preview {
   display: none;
-  /* paddingとmarginゼロでズレ治る？ */
-  padding: 0;
-  margin: 0;
 }

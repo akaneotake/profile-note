@@ -109,6 +109,7 @@ function resizeInput(event) {
   const input = event.target;
   let size = 20;
   let sizeS = 15;
+  let sizeL = 27;
 
   if (input.classList.contains('font15px') == true) {
     if (input.offsetWidth < input.scrollWidth) {
@@ -123,8 +124,20 @@ function resizeInput(event) {
       sizeS = 15;
       input.style.fontSize = sizeS + "px";
     };
-  } 
-  else {
+  } else if (input.classList.contains('font27px') == true) {
+    if (input.offsetWidth < input.scrollWidth) {
+      for (
+        sizeL;
+        input.offsetWidth < input.scrollWidth;
+        sizeL -= 1
+      ) {
+        input.style.fontSize = sizeL + "px";
+      }
+    } else if (input.value === '') {
+      sizeL = 27;
+      input.style.fontSize = sizeL + "px";
+    };
+  } else {
     if (input.offsetWidth < input.scrollWidth) {
       for (
         size;
@@ -169,17 +182,19 @@ function showIconPreview(event) {
 };
 
 // スクリーンショット
+// ☆彡引数追加、これでズレなくなる？
 function previewImg(event) {
-  html2canvas(document.getElementById("image")).then(canvas => {
+  html2canvas(document.getElementById("image"), {
+    scrollX: 0,
+    scrollY: -window.scrollY,
+  }).then(canvas => {
     const imageURL = canvas.toDataURL();
 
     document.getElementById('preview').setAttribute("src", canvas.toDataURL());
     document.getElementById("img-link").href = imageURL;
 
-    document.getElementById('preview').style.display = "block";
-    
-    //document.body.appendChild(canvas)
-  });
+    document.getElementById('preview').style.display = "block";    
+  });  
 };
 
 // イベントリスナー
