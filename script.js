@@ -171,10 +171,9 @@ function showIconPreview(event) {
   const iconChoose = document.getElementById('user-icon-choose');
 
   if (file) {
-    iconPreview.setAttribute('src', URL.createObjectURL(file[0]));
+    iconPreview.style.backgroundImage = 'url(' + URL.createObjectURL(file[0]) + ')';
     iconPreview.style.display = 'block';
     iconChoose.style.opacity = 0;
-
   } else {
     iconPreview.style.display = 'none';
     iconChoose.style.opacity = 1;

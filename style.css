@@ -59,7 +59,9 @@ input {
   font-size: 20px;
   font-weight: bold;
   /* ☆彡中央寄せしたらプレビューズレる？ */
-  text-align: center;
+  /* text-align: center; */
+  /* ☆彡ここimportantしたらズレなくなる？ */
+  line-height: 1 !important;
 }
 
 textarea {
@@ -72,19 +74,15 @@ textarea {
   font-family: "Yomogi", cursive;
   font-weight: bold;
   /* ☆彡中央寄せしたらプレビューズレる？ */
-  text-align: center;
-  line-height: 1;
+  /* text-align: center; */
+  /* ☆彡ここimportantしたらズレなくなる？ */
+  line-height: 1 !important;
   overflow:hidden;
 }
 
 .font15px {
   height: 17px;
   font-size: 15px;
-}
-
-.font27px {
-  height: 29px;
-  font-size: 27px;
 }
 
 /* 左上input */
@@ -164,12 +162,16 @@ textarea {
 #user-icon-preview {
   display: none;
   position: absolute;
-  border: solid 1px;
+  border: solid 1px black !important;
   border-radius: 10px;
   width: 125px !important;
   height: 126px !important;
   left: 430px;
   top: 65px;
+  background-image: "";
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 #user-icon-choose::file-selector-button {
@@ -339,6 +341,11 @@ textarea {
 }
 
 /* 左下のinput(BEST3) */
+.font27px {
+  height: 29px;
+  font-size: 27px;
+}
+
 #best3-thema {
   width: 134px;
   left: 88px;
@@ -412,6 +419,106 @@ textarea {
 #if-3million {
   left: 988px;
 }
+
+/* 右中のinput(My favorites+) */
+.rightmiddle-input {
+  width: 112px;
+}
+
+#onigiri {
+  left: 615px;
+  top: 192px;
+}
+
+#sushi {
+  left: 734px;
+  top: 192px;
+}
+
+#pudding {
+  left: 854px;
+  top: 192px;
+}
+
+#tamagoyaki {
+  left: 975px;
+  top: 192px;
+}
+
+#ramen {
+  left: 615px;
+  top: 237px;
+}
+
+#curry {
+  left: 734px;
+  top: 237px;
+}
+
+#alcohol {
+  left: 854px;
+  top: 237px;
+}
+
+#otsumami {
+  left: 975px;
+  top: 237px;
+}
+
+#nabe {
+  left: 615px;
+  top: 283px;
+}
+
+#misosiru {
+  left: 734px;
+  top: 283px;
+}
+
+#oden {
+  left: 854px;
+  top: 283px;
+}
+
+#pizza {
+  left: 975px;
+  top: 283px;
+}
+
+#anko {
+  left: 615px;
+  top: 329px;
+}
+
+#taiyaki {
+  left: 734px;
+  top: 329px;
+}
+
+#medamayaki {
+  left: 854px;
+  top: 329px;
+}
+
+#tonkatsu {
+  left: 975px;
+  top: 329px;
+}
+
+#not-favorite-food {
+  width: 295px;
+  left: 615px;
+  top: 376px;
+}
+
+#last-food {
+  width: 169px;
+  left: 918px;
+  top: 376px;
+}
+
+
+
 
 .btn {
   display: block;
