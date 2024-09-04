@@ -1,10 +1,3 @@
-/* ☆彡変化をチェック 
-.body {
-  max-width: 1170px;
-  max-height: 845px;
-  line-height: initial !important;
-} */
-
 h1, h4, span {
   font-family: "Yomogi", cursive;
 }
@@ -36,10 +29,6 @@ label span {
 
 #image {
   position: relative;
-  /* ☆彡これで変わる？
-  width: 1170px;
-  height: 845px;
-  */
 }
 
 #image > img {
@@ -49,8 +38,6 @@ label span {
 
 input {
   position: absolute;
-  /* ☆彡inline-blockでプレビューズレ変わる？ 
-  display: inline-block;*/
   height: 22px;
   border: none;
   background-color: transparent;
@@ -60,13 +47,11 @@ input {
   /* ☆彡中央寄せしたらプレビューズレる？ */
   /* text-align: center; */
   /* ☆彡ここimportantしたらズレなくなる？ */
-  line-height: 100% !important;
+  line-height: 150% !important;
 }
 
 textarea {
   position: absolute;
-  /* ☆彡inline-blockでプレビューズレ変わる？
-  display: inline-block; */
   resize: none;
   border: none;
   background-color: transparent;
@@ -75,7 +60,7 @@ textarea {
   /* ☆彡中央寄せしたらプレビューズレる？ */
   /* text-align: center; */
   /* ☆彡ここimportantしたらズレなくなる？ */
-  line-height: 100% !important;
+  line-height: 350% !important;
   overflow:hidden;
 }
 
@@ -120,7 +105,7 @@ textarea {
 
 #user-icon-choose {
   display: block;
-  border: solid 1px;
+  border: solid 1px black !important;
   border-radius: 10px;
   width: 123px;
   height: 124px;
@@ -128,7 +113,42 @@ textarea {
   top: 65px;
 }
 
+.select-button {
+  position: absolute;
+  background-color: transparent;
+  height: 1.4rem;
+  border: none;
+}
+
+.select-button-active {
+  border: solid 2px;
+  border-radius: 10px;
+}
+
 /* ----ここから入力部分のCSS---- */
+/* 左・選択肢 */
+#watashi {
+  width: 51px;
+  left: 81px;
+  top: 63px;
+}
+#boku {
+  width: 36px;
+  left: 138px;
+  top: 63px;
+}
+
+#left {
+  width: 25px;
+  left: 290px;
+  top: 121px;
+}
+#right {
+  width: 25px;
+  left: 319px;
+  top: 121px;
+}
+
 /* 左上input */
 #date-year {
   width: 37px;
@@ -469,6 +489,84 @@ textarea {
   top: 376px;
 }
 
+/* 右・選択肢 */
+#dog {
+  width: 25px;
+  left: 684px;
+  top: 459px;
+}
+#cat {
+  width: 25px;
+  left: 724px;
+  top: 459px;
+}
+
+#another-animal {
+  width: 68px;
+  left: 776px;
+  top: 459px;
+}
+
+#indoor {
+  width: 65px;
+  left: 684px;
+  top: 483px;
+}
+#outdoor {
+  width: 80px;
+  left: 764px;
+  top: 483px;
+}
+#rice {
+  width: 50px;
+  left: 684px;
+  top: 508px;
+}
+#bread {
+  width: 37px;
+  left: 752px;
+  top: 508px;
+}
+#reply-fast {
+  width: 90px;
+  left: 684px;
+  top: 532px;
+}
+#reply-slow {
+  width: 68px;
+  left: 790px;
+  top: 532px;
+}
+#kinoko {
+  width: 80px;
+  left: 644px;
+  top: 556px;
+}
+#takenoko {
+  width: 90px;
+  left: 739px;
+  top: 556px;
+}
+#roller-coaster-yes {
+  width: 50px;
+  left: 697px;
+  top: 581px;
+}
+#roller-coaster-no {
+  width: 68px;
+  left: 763px;
+  top: 581px;
+}
+#furusato-nouzei-yes {
+  width: 50px;
+  left: 727px;
+  top: 605px;
+}
+#furusato-nouzei-no {
+  width: 65px;
+  left: 793px;
+  top: 605px;
+}
 
 
 /* プレビュー＆ダウンロードボタン */

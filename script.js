@@ -180,6 +180,17 @@ function showIconPreview(event) {
   }
 };
 
+// 選択用ボタントグル
+function selectButton(event) {
+  const btn = event.target;
+
+  if (btn.classList.contains('select-button-active')) {
+    btn.classList.remove('select-button-active');
+  } else {
+    btn.classList.toggle('select-button-active');
+  };
+};
+
 // スクリーンショット
 // ☆彡引数追加、これでズレなくなる？
 function previewImg(event) {
@@ -225,6 +236,12 @@ window.onload = function() {
   // showIconPreview関数
   const iconChoose = document.getElementById('user-icon-choose');
   iconChoose.addEventListener('change', showIconPreview);
+
+  // selectButton関数
+  const selectBtn = document.querySelectorAll('.select-button');
+  selectBtn.forEach(function(e) {
+    e.addEventListener('click', selectButton);
+  });
 
   // previewImg関数
   const btn = document.getElementById('preview-btn');
