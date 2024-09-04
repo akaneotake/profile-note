@@ -1,9 +1,9 @@
-/* ☆彡これで変わる？ */
+/* ☆彡これで変わる？
 body {
   line-height: 0.5 !important;
-}
+} */
 
-h1, h4, span, p {
+h1, h4, span {
   font-family: "Yomogi", cursive;
 }
 
@@ -24,8 +24,7 @@ select {
   font-weight: bold;
 }
 
-/* ☆彡ここクラス名つけた方がいい？ */
-label span {
+#for-normal-font {
   position: relative;
   font-weight: normal;
   padding-left: 22px;
@@ -39,8 +38,8 @@ label span {
 }
 
 #image > img {
-  /* ☆彡これで変わる？ */
-  display: inline-block;
+  /* ☆彡これで変わる？
+  display: inline-block; */
   position: absolute;
   width: 1170px;
   height: 845px;
@@ -57,11 +56,11 @@ input {
   font-size: 20px;
   font-weight: bold;
   /* ☆彡中央寄せしたらプレビューズレる？ */
-  /* text-align: center; */
+  text-align: center;
   /* ☆彡ここimportantしたらズレなくなる？％上げたら？ 
   line-height: 250% !important; */
-  /* padding関係ある？ */
-  padding: 0;
+  /* padding関係ある？
+  padding: 0;*/
 }
 
 textarea {
@@ -72,23 +71,21 @@ textarea {
   font-family: "Yomogi", cursive;
   font-weight: bold;
   /* ☆彡中央寄せしたらプレビューズレる？ */
-  /* text-align: center; */
-  /* ☆彡bodyのline-heightチェック、でもtextareaは1じゃないとデザイン崩れる、、、。 
-  line-height: 1 !important; */
+  text-align: center;
+  /* ☆彡bodyのline-heightチェック、でもtextareaは1じゃないとデザイン崩れる、、、。 */
+  line-height: 1 !important;
   overflow:hidden;
-  /* padding関係ある？ */
-  padding: 0;
+  /* padding関係ある？
+  padding: 0;*/
 }
 
 /* input・小さい文字用 */
 .font15px {
-  height: 17px;
   font-size: 15px;
 }
 
 /* input・大きい文字用 */
 .font27px {
-  height: 29px;
   font-size: 27px;
 }
 
@@ -363,17 +360,17 @@ textarea {
 #best3-thema {
   width: 134px;
   left: 88px;
-  top: 654px;
+  top: 658px;
 }
 
 #best3-1 {
-  top: 696px;
+  top: 701px;
 }
 #best3-2 {
-  top: 732px;
+  top: 737px;
 }
 #best3-3 {
-  top: 768px;
+  top: 773px;
 }
 
 /* 左下のtextarea */
@@ -519,8 +516,8 @@ textarea {
 
 #another-animal {
   width: 68px;
-  left: 776px;
-  top: 459px;
+  left: 774px;
+  top: 457px;
 }
 
 #indoor {

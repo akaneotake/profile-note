@@ -49,7 +49,7 @@
   </head>
  
   <body>
-    <h1>画面上で書けるプロフィール帳</h1>
+    <h1>♡画面上で書けるプロフィール帳♡</h1>
     <div class="typography">
       <div class="typography-item">
         <h4>フォント: </h4>
@@ -83,13 +83,12 @@
 
       <label class="typography-item">
         <input id="not-bold" type="checkbox" name="not-bold" value="not-bold">
-        <span>文字を細くする</span>
+        <span id="for-normal-font">文字を細くする</span>
       </label>
     </div>
 
-    <p>※選択欄は、クリックすると選んだり選ばなかったりできます。</p>
-    <p>※<b>TwitterとInstagramのユーザー名は、@抜きで書いてください。</b>そうするとそのままSNSのページに飛べるようになります。</p>
-
+    <h4><b>※選択欄は、クリックするとマルが付いたり消えたりします。</b></h4>
+  
     <div id="image">
       <img src="./images/profile-img.jpg" alt="プロフィール帳">
       <!-- ユーザー記述部分スタート -->
@@ -122,28 +121,25 @@
       <input id="user-icon-choose" type="file" name="user-icon" accept="image/*">
       
       <!-- 左上右のinput(SNS, 文字小） -->
-      <a id="twitter-link" href="#">
-        <input id="twitter" class="font15px" type="text" name="twitter" placeholder="@抜きで">
-      </a>
-
-      <input id="instagram" class="font15px" type="text" name="instagram" placeholder="@抜きで">
+      <input id="twitter" class="font15px" type="text" name="twitter" placeholder="@twitter">
+      <input id="instagram" class="font15px" type="text" name="instagram" placeholder="@instagram">
 
       <!-- 左上のtextarea -->
       <textarea id="hobby" class="leftup-textarea" maxlength="30" placeholder="ここに趣味をかいてね"></textarea>
       <textarea id="skill" class="leftup-textarea" maxlength="30" placeholder="ここに特技をかいてね"></textarea>
       <textarea id="boom" class="leftup-textarea" maxlength="30" placeholder="ここにマイブームをかいてね"></textarea>
-      <textarea id="occupation" class="leftup-textarea" maxlength="30" placeholder="ここに職業をかいてね"></textarea>
+      <textarea id="occupation" class="leftup-textarea" maxlength="30" placeholder="ここに職業や肩書をかいてね"></textarea>
 
       <!-- 左上右のinput -->
-      <input id="birthplace" class="leftup-input text-small" type="text" name="birthplace" placeholder="どこ生まれ？">
-      <input id="siblings" class="leftup-input text-small" type="text" name="siblings" placeholder="兄弟姉妹">
-      <input id="user-height" class="leftup-input text-small" type="text" name="user-height" placeholder="何センチ？">
-      <input id="shoe-size" class="leftup-input text-small" type="text" name="shoe-size" placeholder="足何センチ？">
+      <input id="birthplace" class="leftup-input text-small" type="text" name="birthplace" placeholder="出身地">
+      <input id="siblings" class="leftup-input text-small" type="text" name="siblings" placeholder="兄弟構成">
+      <input id="user-height" class="leftup-input text-small" type="text" name="user-height" placeholder="身長">
+      <input id="shoe-size" class="leftup-input text-small" type="text" name="shoe-size" placeholder="靴のサイズ">
 
       <!-- 左中のinput -->
       <input id="feel-adult" class="leftmiddle-input" type="text" name="feel-adult" placeholder="大人になったなぁ～">
       <input id="feel-happy" class="leftmiddle-input" type="text" name="feel-happy" placeholder="幸せだなぁ～">
-      <input id="favorit-word" class="leftmiddle-input" type="text" name="favorit-word" placeholder="好きな言葉">
+      <input id="favorit-word" class="leftmiddle-input" type="text" name="favorit-word" placeholder="座右の銘・好きな言葉">
 
       <!-- 左中のinput(My favorites, 文字小) -->
       <input id="f-food" class="leftmiddle-my-favorites font15px" type="text" name="f-food" placeholder="好きな食べ物">
@@ -168,10 +164,10 @@
       <input id="best3-3" class="leftdown-best3 font27px" type="text" name="best3-3" placeholder="3位♡">
 
       <!-- 左下のtextarea -->
-      <textarea id="present-you-like" class="leftdown-textarea" maxlength="21" placeholder="嬉しいプレゼント"></textarea>
-      <textarea id="want-to-challenge" class="leftdown-textarea" maxlength="21" placeholder="チャレンジ"></textarea>
-      <textarea id="present-you-want" class="leftdown-textarea" maxlength="21" placeholder="欲しいプレゼント"></textarea>
-      <textarea id="good-memory" class="leftdown-textarea" maxlength="21" placeholder="いい思い出"></textarea>
+      <textarea id="present-you-like" class="leftdown-textarea" maxlength="21" placeholder="こんなプレゼントが嬉しいな"></textarea>
+      <textarea id="want-to-challenge" class="leftdown-textarea" maxlength="21" placeholder="こんなことにチャレンジしたいな"></textarea>
+      <textarea id="present-you-want" class="leftdown-textarea" maxlength="21" placeholder="いま欲しいものはこれ！"></textarea>
+      <textarea id="good-memory" class="leftdown-textarea" maxlength="21" placeholder="楽しかった思い出はこれ！"></textarea>
 
       <!-- 右上のtextarea(if) -->
       <textarea id="if-reborn" class="rightup-textarea" maxlength="21" placeholder="何になりたい？"></textarea>

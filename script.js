@@ -92,8 +92,8 @@ function selectColor(event) {
   };
 };
 
-// 文字を太字に変更
-function checkBold(event) {
+// 文字を細字に変更
+function checkFontWeight(event) {
   const checkbox = event.target;
   if (checkbox.checked) {
     $('input').css('font-weight', 'normal');
@@ -213,20 +213,6 @@ function changeFileName() {
   };
 };
 
-// 入力されたSNSユーザー名をリンクに使用する
-function twitterLink() {
-  const twitter = document.getElementById('twitter').value;
-  const aTag = document.getElementById('twitter-link');
-
-  if (twitter) {
-    aTag.setAttribute('href', 'https://x.com/' + twitter);
-    console.log(aTag);
-  } else {
-    aTag.setAttribute('href', '#');
-    console.log(aTag);
-  };
-};
-
 // スクリーンショット
 function previewImg() {
   const captureImg = document.getElementById("image");
@@ -250,9 +236,9 @@ window.onload = function() {
   const colorSelect = document.querySelector('[name="color-select"]');
   colorSelect.addEventListener('change', selectColor);
 
-  // checkBold関数
+  // checkFontWeight関数
   const checkbox = document.getElementById('not-bold');
-  checkbox.addEventListener('change', checkBold);
+  checkbox.addEventListener('change', checkFontWeight);
 
   // resizeInput関数
   const input = document.querySelectorAll('input');
@@ -280,13 +266,8 @@ window.onload = function() {
   const userName = document.getElementById('username');
   userName.addEventListener('change', changeFileName);
 
-  // twitterLink関数
-  const twitter = document.getElementById('twitter');
-  twitter.addEventListener('change', twitterLink);
-
   // previewImg関数
   const btn = document.getElementById('preview-btn');
   btn.addEventListener('click', previewImg);
-
 
 };
