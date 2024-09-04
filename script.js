@@ -196,7 +196,7 @@ function previewImg(event) {
   });  
 };
 
-// イベントリスナー
+// 全てのイベントリスナー
 window.onload = function() {
   // selectFont関数
   const fontSelect = document.querySelector('[name="font-select"]');

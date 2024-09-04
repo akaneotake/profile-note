@@ -1,9 +1,9 @@
-/* ☆彡変化をチェック */
+/* ☆彡変化をチェック 
 .body {
   max-width: 1170px;
   max-height: 845px;
   line-height: initial !important;
-}
+} */
 
 h1, h4, span {
   font-family: "Yomogi", cursive;
@@ -36,9 +36,10 @@ label span {
 
 #image {
   position: relative;
-  /* ☆彡これで変わる？ */
+  /* ☆彡これで変わる？
   width: 1170px;
   height: 845px;
+  */
 }
 
 #image > img {
@@ -48,11 +49,9 @@ label span {
 
 input {
   position: absolute;
-  /* ☆彡inline-blockでプレビューズレ変わる？ */
-  display: inline-block;
+  /* ☆彡inline-blockでプレビューズレ変わる？ 
+  display: inline-block;*/
   height: 22px;
-  /* ☆彡line-height変えたら表示変わる？ 
-  line-height: 1rem; */
   border: none;
   background-color: transparent;
   font-family: "Yomogi", cursive;
@@ -61,13 +60,13 @@ input {
   /* ☆彡中央寄せしたらプレビューズレる？ */
   /* text-align: center; */
   /* ☆彡ここimportantしたらズレなくなる？ */
-  line-height: 1 !important;
+  line-height: 100% !important;
 }
 
 textarea {
   position: absolute;
-  /* ☆彡inline-blockでプレビューズレ変わる？ */
-  display: inline-block;
+  /* ☆彡inline-blockでプレビューズレ変わる？
+  display: inline-block; */
   resize: none;
   border: none;
   background-color: transparent;
@@ -76,86 +75,20 @@ textarea {
   /* ☆彡中央寄せしたらプレビューズレる？ */
   /* text-align: center; */
   /* ☆彡ここimportantしたらズレなくなる？ */
-  line-height: 1 !important;
+  line-height: 100% !important;
   overflow:hidden;
 }
 
+/* input・小さい文字用 */
 .font15px {
   height: 17px;
   font-size: 15px;
 }
 
-/* 左上input */
-#date-year {
-  width: 37px;
-  left: 418px;
-  top: 21px;
-}
-
-#date-month {
-  width: 20px;
-  left: 478px;
-  top: 21px;
-}
-
-#date-day {
-  width: 20px;
-  left: 520px;
-  top: 21px;
-}
-
-#username {
-  width: 123px;
-  left: 235px;
-  top: 62px;
-}
-
-#birth-year {
-  width: 45px;
-  left: 75px;
-  top: 90px;
-}
-
-#birth-month {
-  width: 20px;
-  left: 143px;
-  top: 90px;
-}
-
-#birth-day {
-  width: 20px;
-  left: 188px;
-  top: 90px;
-}
-
-#constellation {
-  width: 52px;
-  left: 284px;
-  top: 90px;
-}
-
-#blood-type {
-  width: 35px;
-  left: 137px;
-  top: 118px;
-}
-
-#nickname {
-  width: 122px;
-  left: 167px;
-  top: 146px;
-}
-
-#character {
-  width: 150px;
-  left: 138px;
-  top: 175px;
-}
-
-#day-off {
-  width: 165px;
-  left: 152px;
-  top: 205px;
+/* input・大きい文字用 */
+.font27px {
+  height: 29px;
+  font-size: 27px;
 }
 
 /* アイコン画像アップロード */
@@ -195,13 +128,75 @@ textarea {
   top: 65px;
 }
 
-/* 左上右のinput（文字小） */
+/* ----ここから入力部分のCSS---- */
+/* 左上input */
+#date-year {
+  width: 37px;
+  left: 418px;
+  top: 21px;
+}
+#date-month {
+  width: 20px;
+  left: 478px;
+  top: 21px;
+}
+#date-day {
+  width: 20px;
+  left: 520px;
+  top: 21px;
+}
+#username {
+  width: 123px;
+  left: 235px;
+  top: 62px;
+}
+#birth-year {
+  width: 45px;
+  left: 75px;
+  top: 90px;
+}
+#birth-month {
+  width: 20px;
+  left: 143px;
+  top: 90px;
+}
+#birth-day {
+  width: 20px;
+  left: 188px;
+  top: 90px;
+}
+#constellation {
+  width: 52px;
+  left: 284px;
+  top: 90px;
+}
+#blood-type {
+  width: 35px;
+  left: 137px;
+  top: 118px;
+}
+#nickname {
+  width: 122px;
+  left: 167px;
+  top: 146px;
+}
+#character {
+  width: 150px;
+  left: 138px;
+  top: 175px;
+}
+#day-off {
+  width: 165px;
+  left: 152px;
+  top: 205px;
+}
+
+/* 左上右のinput(SNS, 文字小） */
 #twitter {
   width: 84px;
   left: 474px;
   top: 193px;
 }
-
 #instagram {
   width: 76px;
   left: 483px;
@@ -219,17 +214,14 @@ textarea {
   left: 75px;
   top: 263px;
 }
-
 #skill {
   left: 228px;
   top: 263px;
 }
-
 #boom {
   left: 75px;
   top: 330px;
 }
-
 #occupation {
   left: 228px;
   top: 330px;
@@ -244,15 +236,12 @@ textarea {
 #birthplace {
   top: 265px;
 }
-
 #siblings {
   top: 290px;
 }
-
 #user-height {
   top: 318px;
 }
-
 #shoe-size {
   top: 343px;
 }
@@ -266,16 +255,14 @@ textarea {
 #feel-adult {
   top: 401px;
 }
-
 #feel-happy {
   top: 426px;
 }
-
 #favorit-word {
   top: 454px;
 }
 
-/* 左中のinput(My favorites) */
+/* 左中のinput(My favorites, 文字小) */
 .leftmiddle-my-favorites {
   width: 108px;
 }
@@ -284,17 +271,14 @@ textarea {
   left: 86px;
   top: 540px;
 }
-
 #f-drink {
   left: 204px;
   top: 540px;
 }
-
 #f-place {
   left: 324px;
   top: 540px;
 } 
-
 #f-character {
   left: 443px;
   top: 540px;
@@ -304,17 +288,14 @@ textarea {
   left: 86px;
   top: 575px;
 }
-
 #f-pattern {
   left: 204px;
   top: 575px;
 }
-
 #f-fragrance {
   left: 324px;
   top: 575px;
 }
-
 #f-brand {
   left: 443px;
   top: 575px;
@@ -324,26 +305,23 @@ textarea {
   left: 86px;
   top: 610px;
 }
-
 #f-sports {
   left: 204px;
   top: 610px;
 }
-
 #f-music {
   left: 324px;
   top: 610px;
 }
-
 #f-book {
   left: 443px;
   top: 610px;
 }
 
-/* 左下のinput(BEST3) */
-.font27px {
-  height: 29px;
-  font-size: 27px;
+/* 左下のinput(BEST3, 文字大) */
+.leftdown-best3 {
+  width: 148px;
+  left: 94px;
 }
 
 #best3-thema {
@@ -352,19 +330,12 @@ textarea {
   top: 654px;
 }
 
-.leftdown-best3 {
-  width: 148px;
-  left: 94px;
-}
-
 #best3-1 {
   top: 696px;
 }
-
 #best3-2 {
   top: 732px;
 }
-
 #best3-3 {
   top: 768px;
 }
@@ -380,17 +351,14 @@ textarea {
   left: 307px;
   top: 675px;
 }
-
 #want-to-challenge {
   left: 415px;
   top: 675px;
 }
-
 #present-you-want {
   left: 355px;
   top: 748px;
 }
-
 #good-memory {
   left: 458px;
   top: 748px;
@@ -407,15 +375,12 @@ textarea {
 #if-reborn {
   left: 625px;
 }
-
 #if-magic {
   left: 747px;
 }
-
 #if-a-month-free {
   left: 869px;
 }
-
 #if-3million {
   left: 988px;
 }
@@ -429,17 +394,14 @@ textarea {
   left: 615px;
   top: 192px;
 }
-
 #sushi {
   left: 734px;
   top: 192px;
 }
-
 #pudding {
   left: 854px;
   top: 192px;
 }
-
 #tamagoyaki {
   left: 975px;
   top: 192px;
@@ -449,17 +411,14 @@ textarea {
   left: 615px;
   top: 237px;
 }
-
 #curry {
   left: 734px;
   top: 237px;
 }
-
 #alcohol {
   left: 854px;
   top: 237px;
 }
-
 #otsumami {
   left: 975px;
   top: 237px;
@@ -469,17 +428,14 @@ textarea {
   left: 615px;
   top: 283px;
 }
-
 #misosiru {
   left: 734px;
   top: 283px;
 }
-
 #oden {
   left: 854px;
   top: 283px;
 }
-
 #pizza {
   left: 975px;
   top: 283px;
@@ -489,17 +445,14 @@ textarea {
   left: 615px;
   top: 329px;
 }
-
 #taiyaki {
   left: 734px;
   top: 329px;
 }
-
 #medamayaki {
   left: 854px;
   top: 329px;
 }
-
 #tonkatsu {
   left: 975px;
   top: 329px;
@@ -510,7 +463,6 @@ textarea {
   left: 615px;
   top: 376px;
 }
-
 #last-food {
   width: 169px;
   left: 918px;
@@ -519,7 +471,7 @@ textarea {
 
 
 
-
+/* プレビュー＆ダウンロードボタン */
 .btn {
   display: block;
   font-family: "Yomogi", cursive;
