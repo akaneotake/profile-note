@@ -201,9 +201,21 @@ function selectButton(event) {
   };
 };
 
+//
+function changeFileName() {
+  const name = document.getElementById('username').value;
+  const downloadLink = document.getElementById('img-link');
+
+  if (name) {
+    downloadLink.setAttribute('download', name + 'のプロフィール帳.png');
+  } else {
+    downloadLink.setAttribute('download', '私のプロフィール帳.png');
+  };
+};
+
 // スクリーンショット
 // ☆彡引数追加、これでズレなくなる？
-function previewImg(event) {
+function previewImg() {
   const captureImg = document.getElementById("image");
   html2canvas(captureImg, {
     foreignObjectRendering: true,
@@ -260,6 +272,10 @@ window.onload = function() {
   selectBtn.forEach(function(e) {
     e.addEventListener('click', selectButton);
   });
+
+  // changeFileName関数
+  const userName = document.getElementById('username');
+  userName.addEventListener('change', changeFileName);
 
   // previewImg関数
   const btn = document.getElementById('preview-btn');
