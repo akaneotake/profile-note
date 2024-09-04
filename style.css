@@ -46,8 +46,8 @@ input {
   font-weight: bold;
   /* ☆彡中央寄せしたらプレビューズレる？ */
   /* text-align: center; */
-  /* ☆彡ここimportantしたらズレなくなる？ */
-  line-height: 150% !important;
+  /* ☆彡ここimportantしたらズレなくなる？％上げたら？ */
+  line-height: 250% !important;
 }
 
 textarea {
@@ -60,13 +60,14 @@ textarea {
   /* ☆彡中央寄せしたらプレビューズレる？ */
   /* text-align: center; */
   /* ☆彡ここimportantしたらズレなくなる？ */
-  line-height: 350% !important;
+  line-height: 1 !important;
   overflow:hidden;
 }
 
 /* input・小さい文字用 */
 .font15px {
-  height: 17px;
+  /* 前は17px、font-sizeと同じにしたらどうする？ */
+  height: 15px;
   font-size: 15px;
 }
 
@@ -568,6 +569,42 @@ textarea {
   top: 605px;
 }
 
+/* 右下textarea(れんそうゲーム) */
+.image-game-textarea {
+  width: 80px;
+  height: 33px;
+  font-size: 16px;
+}
+
+#image-handsome {
+  left: 913px;
+  top: 483px;
+}
+#image-kawaii {
+  left: 1005px;
+  top: 483px;
+}
+#image-funny {
+  left: 913px;
+  top: 542px;
+}
+#image-tennen {
+  left: 1005px;
+  top: 542px;
+}
+#image-fashionable {
+  left: 913px;
+  top: 601px;
+}
+
+/* 右下textarea(フリースペース) */
+#free-space {
+  width: 500px;
+  height: 125px;
+  font-size: 20px;
+  left: 603px;
+  top: 688px;
+}
 
 /* プレビュー＆ダウンロードボタン */
 .btn {

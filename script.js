@@ -159,8 +159,18 @@ function rowsLimit(event) {
   const rows = textarea.value.split(/\r|\r\n|\n/);
   const rowsCount = rows.length;
   
-  if (rowsCount === 3 && event.key === 'Enter') {  
-    event.preventDefault();
+  if (textarea.id === 'free-space') {
+    if (rowsCount === 6 && event.key === 'Enter') {
+      event.preventDefault();
+    }
+  } else if (textarea.classList.contains('image-game-textarea')) {
+    if (rowsCount === 2 && event.key === 'Enter') {
+      event.preventDefault();
+    }
+  } else {
+    if (rowsCount === 3 && event.key === 'Enter') {  
+      event.preventDefault();
+    }
   };  
 };
 
