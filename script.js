@@ -204,9 +204,17 @@ function selectButton(event) {
 // スクリーンショット
 // ☆彡引数追加、これでズレなくなる？
 function previewImg(event) {
-  html2canvas(document.getElementById("image"), {
-    scrollX: 0,
-    scrollY: -window.scrollY,
+  const captureImg = document.getElementById("image");
+  html2canvas(captureImg, {
+    foreignObjectRendering: true,
+    scrollY: -(
+      captureImg.getBoundingClientRect().top +
+      document.documentElement.scrollTop
+    ),
+    scrollX: -(
+      captureImg.getBoundingClientRect().left +
+      document.documentElement.scrollLeft
+    ),
   }).then(canvas => {
     const imageURL = canvas.toDataURL();
 
