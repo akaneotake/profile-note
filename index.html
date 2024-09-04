@@ -85,8 +85,10 @@
         <input id="not-bold" type="checkbox" name="not-bold" value="not-bold">
         <span>文字を細くする</span>
       </label>
-
     </div>
+
+    <p>※選択欄は、クリックすると選んだり選ばなかったりできます。</p>
+    <p>※<b>TwitterとInstagramのユーザー名は、@抜きで書いてください。</b>そうするとそのままSNSのページに飛べるようになります。</p>
 
     <div id="image">
       <img src="./images/profile-img.jpg" alt="プロフィール帳">
@@ -120,8 +122,11 @@
       <input id="user-icon-choose" type="file" name="user-icon" accept="image/*">
       
       <!-- 左上右のinput(SNS, 文字小） -->
-      <input id="twitter" class="font15px" type="text" name="twitter" placeholder="@twitter">
-      <input id="instagram" class="font15px" type="text" name="instagram" placeholder="@インスタ">
+      <a id="twitter-link" href="#">
+        <input id="twitter" class="font15px" type="text" name="twitter" placeholder="@抜きで">
+      </a>
+
+      <input id="instagram" class="font15px" type="text" name="instagram" placeholder="@抜きで">
 
       <!-- 左上のtextarea -->
       <textarea id="hobby" class="leftup-textarea" maxlength="30" placeholder="ここに趣味をかいてね"></textarea>

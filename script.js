@@ -201,7 +201,7 @@ function selectButton(event) {
   };
 };
 
-//
+// ユーザー名に応じてダウンロード時のファイル名を変更
 function changeFileName() {
   const name = document.getElementById('username').value;
   const downloadLink = document.getElementById('img-link');
@@ -213,21 +213,24 @@ function changeFileName() {
   };
 };
 
+// 入力されたSNSユーザー名をリンクに使用する
+function twitterLink() {
+  const twitter = document.getElementById('twitter').value;
+  const aTag = document.getElementById('twitter-link');
+
+  if (twitter) {
+    aTag.setAttribute('href', 'https://x.com/' + twitter);
+    console.log(aTag);
+  } else {
+    aTag.setAttribute('href', '#');
+    console.log(aTag);
+  };
+};
+
 // スクリーンショット
-// ☆彡引数追加、これでズレなくなる？
 function previewImg() {
   const captureImg = document.getElementById("image");
-  html2canvas(captureImg, {
-    foreignObjectRendering: true,
-    scrollY: -(
-      captureImg.getBoundingClientRect().top +
-      document.documentElement.scrollTop
-    ),
-    scrollX: -(
-      captureImg.getBoundingClientRect().left +
-      document.documentElement.scrollLeft
-    ),
-  }).then(canvas => {
+  html2canvas(captureImg).then(canvas => {
     const imageURL = canvas.toDataURL();
 
     document.getElementById('preview').setAttribute("src", canvas.toDataURL());
@@ -276,6 +279,10 @@ window.onload = function() {
   // changeFileName関数
   const userName = document.getElementById('username');
   userName.addEventListener('change', changeFileName);
+
+  // twitterLink関数
+  const twitter = document.getElementById('twitter');
+  twitter.addEventListener('change', twitterLink);
 
   // previewImg関数
   const btn = document.getElementById('preview-btn');
