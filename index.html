@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1 minimum-scale=1, user-scalable=yes">
     <title>画面上で書けるプロフィール帳</title>
 
     <!-- Google フォント -->
@@ -40,6 +40,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Slackside+One&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
     <!-- jQueryのCDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <!-- html2canvas -->
@@ -49,51 +52,67 @@
   </head>
  
   <body>
-    <h1><span>♡画面上で書けるプロフィール帳♡</span></h1>
-    <div class="typography">
-      <div class="typography-item">
-        <h4>フォント: </h4>
-        <select name="font-select">
-          <option value="hand-written" style="font-family: 'Yomogi'" selected>手書き風</option>
-          <option value="cute" style="font-family: 'Hachi Maru Pop'">かわいい</option>
-          <option value="cool" style="font-family: 'Reggae One'">かっこいい</option>
-          <option value="beautiful" style="font-family: 'Kaisei Tokumin'">素敵</option>
-          <option value="powerful" style="font-family: 'Dela Gothic One'">力強い</option>
-          <option value="child" style="font-family: 'Darumadrop One'">こども</option>
-          <option value="adult" style="font-family: 'Yuji Syuku'">大人</option>
-          <option value="dirty" style="font-family: 'Slackside One'">じきたない</option>
-        </select>
-      </div>
-  
-      <div class="typography-item">
-        <h4>文字色: </h4>
-        <select name="color-select">
-          <option value="black" style="color: black">黒</option>
-          <option value="red" style="color: red">赤</option>
-          <option value="blue" style="color: blue">青</option>
-          <option value="aqua" style="color: #00BFFF">水色</option>
-          <option value="yellow" style="color: #FFD700">黄</option>
-          <option value="green" style="color: green">緑</option>
-          <option value="lime" style="color: lime">黄緑</option>
-          <option value="purple" style="color: purple">紫</option>
-          <option value="orange" style="color: orange">オレンジ</option>
-          <option value="pink" style="color: #FF1493">ピンク</option>
-        </select>
+    <div id="before-image">
+      <h1><span>♡画面上で書けるプロフィール帳♡</span></h1>
+
+      <!-- 使い方の説明 -->
+      <div id="description-wrapper">
+        <ul>
+          <li>
+            <span>空欄をクリックすると文字を入力できるよ</span><br>
+          </li>
+          <li>
+            <span>選択欄は、クリックするとマルが付いたり消えたりするよ</span><br>
+          </li>
+          <li>
+            <span>ぜんぶ書き終わったら、下にある「プレビューを読み込む」ボタンで出来上がりをチェックしてね</span><br>
+          </li>
+          <li>
+            <span>プレビューをチェックしたら、「ダウンロード」ボタンから画像をダウンロードして使ってね</span><br>
+          </li>
+        </ul>
       </div>
 
-      <label class="typography-item">
-        <input id="not-bold" type="checkbox" name="not-bold" value="not-bold">
-        <span id="for-normal-font">文字を細くする</span>
-      </label>
-    </div>
+      <!-- タイポグラフィ変更 -->
+      <div class="typography">
+        <div class="typography-item">
+          <h4>フォント: </h4>
+          <select name="font-select">
+            <option value="hand-written" style="font-family: 'Yomogi'" selected>手書き風</option>
+            <option value="cute" style="font-family: 'Hachi Maru Pop'">かわいい</option>
+            <option value="cool" style="font-family: 'Reggae One'">かっこいい</option>
+            <option value="beautiful" style="font-family: 'Kaisei Tokumin'">素敵</option>
+            <option value="powerful" style="font-family: 'Dela Gothic One'">力強い</option>
+            <option value="child" style="font-family: 'Darumadrop One'">こども</option>
+            <option value="adult" style="font-family: 'Yuji Syuku'">大人</option>
+            <option value="dirty" style="font-family: 'Slackside One'">じきたない</option>
+          </select>
+        </div>
+    
+        <div class="typography-item">
+          <h4>文字色: </h4>
+          <select name="color-select">
+            <option value="black" style="color: black">黒</option>
+            <option value="red" style="color: red">赤</option>
+            <option value="blue" style="color: blue">青</option>
+            <option value="aqua" style="color: #00BFFF">水色</option>
+            <option value="yellow" style="color: #FFD700">黄</option>
+            <option value="green" style="color: green">緑</option>
+            <option value="lime" style="color: lime">黄緑</option>
+            <option value="purple" style="color: purple">紫</option>
+            <option value="orange" style="color: orange">オレンジ</option>
+            <option value="pink" style="color: #FF1493">ピンク</option>
+          </select>
+        </div>
 
-    <div id="description-wrapper">
-      <span>♡空欄をクリックすると文字を入力できるよ</span><br>
-      <span>♡選択欄は、クリックするとマルが付いたり消えたりするよ</span><br>
-      <span>♡ぜんぶ書き終わったら、下にある「プレビューを読み込む」ボタンで出来上がりをチェックしてね</span><br>
-      <span>♡プレビューをチェックしたら、「ダウンロード」ボタンから画像をダウンロードして使ってね</span><br>
+        <label class="typography-item">
+          <input id="not-bold" type="checkbox" name="not-bold" value="not-bold">
+          <span id="for-normal-font">文字を細くする</span>
+        </label>
+      </div>
     </div>
   
+    <!-- メイン画像 -->
     <div id="image">
       <img src="./images/profile-img.jpg" alt="プロフィール帳">
       <!-- ユーザー記述部分スタート -->
