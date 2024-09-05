@@ -124,19 +124,6 @@ function resizeInput(event) {
       sizeS = 15;
       input.style.fontSize = sizeS + "px";
     };
-  } else if (input.classList.contains('font27px') == true) {
-    if (input.offsetWidth < input.scrollWidth) {
-      for (
-        sizeL;
-        input.offsetWidth < input.scrollWidth;
-        sizeL -= 1
-      ) {
-        input.style.fontSize = sizeL + "px";
-      }
-    } else if (input.value === '') {
-      sizeL = 27;
-      input.style.fontSize = sizeL + "px";
-    };
   } else {
     if (input.offsetWidth < input.scrollWidth) {
       for (

@@ -49,7 +49,7 @@
   </head>
  
   <body>
-    <h1>♡画面上で書けるプロフィール帳♡</h1>
+    <h1><span>♡画面上で書けるプロフィール帳♡</span></h1>
     <div class="typography">
       <div class="typography-item">
         <h4>フォント: </h4>
@@ -87,7 +87,12 @@
       </label>
     </div>
 
-    <h4><b>※選択欄は、クリックするとマルが付いたり消えたりします。</b></h4>
+    <div id="description-wrapper">
+      <span>♡空欄をクリックすると文字を入力できるよ</span><br>
+      <span>♡選択欄は、クリックするとマルが付いたり消えたりするよ</span><br>
+      <span>♡ぜんぶ書き終わったら、下にある「プレビューを読み込む」ボタンで出来上がりをチェックしてね</span><br>
+      <span>♡プレビューをチェックしたら、「ダウンロード」ボタンから画像をダウンロードして使ってね</span><br>
+    </div>
   
     <div id="image">
       <img src="./images/profile-img.jpg" alt="プロフィール帳">
@@ -158,10 +163,10 @@
       <input id="f-book" class="leftmiddle-my-favorites font15px" type="text" name="f-book" placeholder="好きな本">
 
       <!-- 左下のinput(BEST3, 文字大) -->
-      <input id="best3-thema" class="font27px" type="text" name="best3-thema" placeholder="ベスト3">
-      <input id="best3-1" class="leftdown-best3 font27px" type="text" name="best3-1" placeholder="1位♡">
-      <input id="best3-2" class="leftdown-best3 font27px" type="text" name="best3-2" placeholder="2位♡">
-      <input id="best3-3" class="leftdown-best3 font27px" type="text" name="best3-3" placeholder="3位♡">
+      <input id="best3-thema" type="text" name="best3-thema" placeholder="ベスト3">
+      <input id="best3-1" class="leftdown-best3" type="text" name="best3-1" placeholder="1位♡">
+      <input id="best3-2" class="leftdown-best3" type="text" name="best3-2" placeholder="2位♡">
+      <input id="best3-3" class="leftdown-best3" type="text" name="best3-3" placeholder="3位♡">
 
       <!-- 左下のtextarea -->
       <textarea id="present-you-like" class="leftdown-textarea" maxlength="21" placeholder="こんなプレゼントが嬉しいな"></textarea>
@@ -231,11 +236,11 @@
     </div>
 
     <!-- 画像ダウンロード -->
-    <button id="preview-btn" class="btn" type="button">♡画像プレビューを読み込む♡</button>
+    <button id="preview-btn" class="btn" type="button">♡プレビューを読み込む♡</button>
 
     <img src="" id="preview" alt="プロフィール帳のプレビュー" />
 
-    <button id="download-btn" class="btn" type="button"><a href="" id="img-link" download="私のプロフィール帳.png">♡画像をダウンロード♡</a></button>
+    <button id="download-btn" class="btn" type="button"><a href="" id="img-link" download="私のプロフィール帳.png">♡ダウンロード♡</a></button>
     
   </body>
 </html>

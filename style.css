@@ -1,10 +1,44 @@
-/* ☆彡これで変わる？
 body {
-  line-height: 0.5 !important;
-} */
-
-h1, h4, span {
   font-family: "Yomogi", cursive;
+  font-weight: bold;
+}
+
+h1 {
+  position: relative;
+  margin: 30px;
+  display: inline-block;
+}
+
+h1:before,
+h1:after {
+  position: absolute;
+  bottom: -15px;
+  content: '';
+  border: 1em solid rgb(223, 110, 223);
+}
+
+h1:before {
+  left: -30px;
+  border-left-width: 15px;
+  border-left-color: transparent;
+}
+
+h1:after {
+  right: -30px;
+  border-right-width: 15px;
+  border-right-color: transparent;
+}
+
+h1 span {
+  position: relative;
+  z-index: 2;
+  display: block;
+  padding: 0.2em 0.5em;
+  color: white;
+  background: rgb(240, 141, 240);
+  box-shadow: 0px 0px 0px 5px rgb(240, 141, 240);
+  border: dashed 2px white;
+  border-radius: 10px;
 }
 
 .typography {
@@ -15,12 +49,11 @@ h1, h4, span {
   display: flex;
   align-items: center;
   margin-left: 25px;
-  font-weight: bold;
 }
 
 select {
   margin-left: 7px;
-  font-family: 'Yomogi';
+  font-family: "Yomogi", cursive;
   font-weight: bold;
 }
 
@@ -31,6 +64,15 @@ select {
   top: -1px; 
 }
 
+#description-wrapper {
+  margin-bottom: 20px;
+}
+
+#description-wrapper span {
+  border-bottom: dashed 2px rgb(223, 110, 223);
+  line-height: 1.9em;
+}
+
 #image {
   position: relative;
   width: 1170px;
@@ -38,8 +80,6 @@ select {
 }
 
 #image > img {
-  /* ☆彡これで変わる？
-  display: inline-block; */
   position: absolute;
   width: 1170px;
   height: 845px;
@@ -55,12 +95,10 @@ input {
   font-family: "Yomogi", cursive;
   font-size: 20px;
   font-weight: bold;
-  /* ☆彡中央寄せしたらプレビューズレる？ */
-  text-align: center;
-  /* ☆彡ここimportantしたらズレなくなる？％上げたら？ 
-  line-height: 250% !important; */
-  /* padding関係ある？
-  padding: 0;*/
+  /* ☆彡中央寄せしたらプレビューズレる？
+  text-align: center; */
+  /* padding関係ある？ */
+  padding: 0;
 }
 
 textarea {
@@ -70,23 +108,17 @@ textarea {
   background-color: transparent;
   font-family: "Yomogi", cursive;
   font-weight: bold;
-  /* ☆彡中央寄せしたらプレビューズレる？ */
-  text-align: center;
-  /* ☆彡bodyのline-heightチェック、でもtextareaは1じゃないとデザイン崩れる、、、。 */
+  /* ☆彡中央寄せしたらプレビューズレる？
+  text-align: center; */
   line-height: 1 !important;
   overflow:hidden;
-  /* padding関係ある？
-  padding: 0;*/
+  /* padding関係ある？ */
+  padding: 0;
 }
 
 /* input・小さい文字用 */
 .font15px {
   font-size: 15px;
-}
-
-/* input・大きい文字用 */
-.font27px {
-  font-size: 27px;
 }
 
 /* アイコン画像アップロード */
@@ -302,65 +334,65 @@ textarea {
 
 #f-food {
   left: 86px;
-  top: 540px;
+  top: 538px;
 }
 #f-drink {
   left: 204px;
-  top: 540px;
+  top: 538px;
 }
 #f-place {
   left: 324px;
-  top: 540px;
+  top: 538px;
 } 
 #f-character {
   left: 443px;
-  top: 540px;
+  top: 538px;
 }
 
 #f-color {
   left: 86px;
-  top: 575px;
+  top: 573px;
 }
 #f-pattern {
   left: 204px;
-  top: 575px;
+  top: 573px;
 }
 #f-fragrance {
   left: 324px;
-  top: 575px;
+  top: 573px;
 }
 #f-brand {
   left: 443px;
-  top: 575px;
+  top: 573px;
 }
 
 #f-animal {
   left: 86px;
-  top: 610px;
+  top: 608px;
 }
 #f-sports {
   left: 204px;
-  top: 610px;
+  top: 608px;
 }
 #f-music {
   left: 324px;
-  top: 610px;
+  top: 608px;
 }
 #f-book {
   left: 443px;
-  top: 610px;
+  top: 608px;
 }
 
 /* 左下のinput(BEST3, 文字大) */
 .leftdown-best3 {
   width: 148px;
-  left: 94px;
+  left: 98px;
 }
 
 #best3-thema {
   width: 134px;
-  left: 88px;
-  top: 658px;
+  left: 91px;
+  top: 659px;
 }
 
 #best3-1 {
@@ -621,13 +653,14 @@ textarea {
 /* プレビュー＆ダウンロードボタン */
 .btn {
   display: block;
-  font-family: "Yomogi", cursive;
-  font-weight: bold;
-  font-size: 30px;
-  border: double;
+  background: rgb(240, 141, 240);
+  border: dashed 3px white;
   border-radius: 10px;
-  border-color: blueviolet;
-  box-shadow: 4px 4px gray;
+  font-family: "Yomogi", cursive;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  box-shadow: 5px 5px gray;
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -642,4 +675,9 @@ textarea {
 
 #preview {
   display: none;
+}
+
+#img-link {
+  color: white;
+  text-decoration: none;
 }
