@@ -95,10 +95,12 @@ input {
   font-family: "Yomogi", cursive;
   font-size: 20px;
   font-weight: bold;
-  /* ☆彡中央寄せしたらプレビューズレる？
-  text-align: center; */
+  /* ☆彡中央寄せしたらプレビューズレる？ */
+  text-align: center; 
   /* padding関係ある？ */
   padding: 0;
+  padding-block: 0 !important; 
+  padding-inline: 0 !important;
 }
 
 textarea {
@@ -108,8 +110,8 @@ textarea {
   background-color: transparent;
   font-family: "Yomogi", cursive;
   font-weight: bold;
-  /* ☆彡中央寄せしたらプレビューズレる？
-  text-align: center; */
+  /* ☆彡中央寄せしたらプレビューズレる？ */
+  text-align: center;
   line-height: 1 !important;
   overflow:hidden;
   /* padding関係ある？ */
