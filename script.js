@@ -140,25 +140,39 @@ function resizeInput(event) {
   };
 };
 
-// textareaの行数制限
-function rowsLimit(event) {
+// textareaへの文字入力量によってフォントサイズ変更
+function resizeTextarea(event) {
   const textarea = event.target;
-  const rows = textarea.value.split(/\r|\r\n|\n/);
-  const rowsCount = rows.length;
-  
-  if (textarea.id === 'free-space') {
-    if (rowsCount === 6 && event.key === 'Enter') {
-      event.preventDefault();
-    }
-  } else if (textarea.classList.contains('image-game-textarea')) {
-    if (rowsCount === 2 && event.key === 'Enter') {
-      event.preventDefault();
-    }
+  let size = 20;
+  let sizeS = 16;
+
+  if (textarea.classList.contains('image-game-textarea')) {
+    if(textarea.offsetHeight < textarea.scrollHeight) {
+      for (
+        sizeS;
+        textarea.offsetHeight < textarea.scrollHeight;
+        sizeS -= 1
+      ) {
+        textarea.style.fontSize = sizeS + "px";
+      };    
+    } else if (textarea.value === '') {
+      size = 16;
+      textarea.style.fontSize = sizeS + "px";
+    };
   } else {
-    if (rowsCount === 3 && event.key === 'Enter') {  
-      event.preventDefault();
-    }
-  };  
+    if(textarea.offsetHeight < textarea.scrollHeight) {
+      for (
+        size;
+        textarea.offsetHeight < textarea.scrollHeight;
+        size -= 1
+      ) {
+        textarea.style.fontSize = size + "px";
+      };    
+    } else if (textarea.value === '') {
+      size = 20;
+      textarea.style.fontSize = size + "px";
+    };
+  };
 };
 
 // アイコン画像のプレビュー表示
@@ -227,16 +241,16 @@ window.onload = function() {
   const checkbox = document.getElementById('not-bold');
   checkbox.addEventListener('change', checkFontWeight);
 
-  // resizeInput関数
+  // resizeInput関数 (input)
   const input = document.querySelectorAll('input');
   input.forEach(function(e) {
     e.addEventListener('input', resizeInput);
   });
 
-  // resizeTextarea関数
+  // resizeTextarea関数 (textarea)
   const textarea = document.querySelectorAll('textarea');
   textarea.forEach(function(e) {
-    e.addEventListener('keydown', rowsLimit);
+    e.addEventListener('input', resizeTextarea);
   });
 
   // showIconPreview関数

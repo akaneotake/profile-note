@@ -186,6 +186,7 @@ textarea {
   border: none;
   background-color: transparent;
   font-family: "Yomogi", cursive;
+  font-size: 20px;
   font-weight: bold;
   line-height: 1 !important;
   overflow:hidden;
@@ -349,7 +350,6 @@ textarea {
 .leftup-textarea {
   width: 145px;
   height: 45px;
-  font-size: 14px;
 }
 
 #hobby {
@@ -357,7 +357,7 @@ textarea {
   top: 263px;
 }
 #skill {
-  left: 228px;
+  left: 229px;
   top: 263px;
 }
 #boom {
@@ -365,7 +365,7 @@ textarea {
   top: 330px;
 }
 #occupation {
-  left: 228px;
+  left: 229px;
   top: 330px;
 }
 
@@ -485,16 +485,15 @@ textarea {
 /* 左下のtextarea */
 .leftdown-textarea {
   height: 52px;
-  font-size: 14px;
 }
 
 #present-you-like {
   width: 100px;
-  left: 307px;
+  left: 305px;
   top: 675px;
 }
 #want-to-challenge {
-  width: 130px;
+  width: 115px;
   left: 415px;
   top: 675px;
 }
@@ -505,29 +504,28 @@ textarea {
 }
 #good-memory {
   width: 115px;
-  left: 458px;
+  left: 462px;
   top: 748px;
 }
 
 /* 右上のtextarea（if） */
 .rightup-textarea {
-  width: 116px;
+  width: 100px;
   height: 50px;
-  font-size: 16px;
   top: 58px;
 }
 
 #if-reborn {
-  left: 625px;
+  left: 634px;
 }
 #if-magic {
-  left: 747px;
+  left: 756px;
 }
 #if-a-month-free {
-  left: 869px;
+  left: 878px;
 }
 #if-3million {
-  left: 988px;
+  left: 998px;
 }
 
 /* 右中のinput(My favorites+) */
@@ -696,36 +694,35 @@ textarea {
 /* 右下textarea(れんそうゲーム) */
 .image-game-textarea {
   width: 80px;
-  height: 33px;
+  height: 38px;
   font-size: 16px;
 }
 
 #image-handsome {
   left: 918px;
-  top: 485px;
+  top: 483px;
 }
 #image-kawaii {
   left: 1009px;
-  top: 485px;
+  top: 483px;
 }
 #image-funny {
   left: 918px;
-  top: 543px;
+  top: 541px;
 }
 #image-tennen {
   left: 1009px;
-  top: 543px;
+  top: 541px;
 }
 #image-fashionable {
   left: 918px;
-  top: 601px;
+  top: 599px;
 }
 
 /* 右下textarea(フリースペース) */
 #free-space {
   width: 500px;
   height: 125px;
-  font-size: 20px;
   left: 603px;
   top: 688px;
 }
