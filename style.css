@@ -180,11 +180,6 @@ input {
   padding-inline: 0 !important;
 }
 
-/* ☆彡中央寄せしたらプレビューズレる？ */
-input[type=text] {
-  text-align: center; 
-}
-
 textarea {
   position: absolute;
   resize: none;
@@ -196,11 +191,6 @@ textarea {
   overflow:hidden;
   /* padding関係ある？ */
   padding: 0;
-}
-
-/* ☆彡中央寄せしたらプレビューズレる？ */
-textarea[type=text]{
-  text-align: center; 
 }
 
 /* input・小さい文字用 */
@@ -304,7 +294,7 @@ textarea[type=text]{
 }
 #birth-year {
   width: 45px;
-  left: 75px;
+  left: 79px;
   top: 90px;
 }
 #birth-month {
@@ -319,23 +309,23 @@ textarea[type=text]{
 }
 #constellation {
   width: 52px;
-  left: 284px;
+  left: 288px;
   top: 90px;
 }
 #blood-type {
-  width: 35px;
-  left: 137px;
-  top: 118px;
+  width: 28px;
+  left: 144px;
+  top: 119px;
 }
 #nickname {
   width: 122px;
   left: 167px;
-  top: 146px;
+  top: 148px;
 }
 #character {
   width: 150px;
-  left: 138px;
-  top: 175px;
+  left: 140px;
+  top: 176px;
 }
 #day-off {
   width: 165px;
@@ -346,7 +336,7 @@ textarea[type=text]{
 /* 左上右のinput(SNS, 文字小） */
 #twitter {
   width: 84px;
-  left: 474px;
+  left: 475px;
   top: 193px;
 }
 #instagram {
@@ -400,7 +390,7 @@ textarea[type=text]{
 
 /* 左中のinput */
 .leftmiddle-input {
-  width: 275px;
+  width: 279px;
   left: 300px;
 }
 
@@ -494,24 +484,27 @@ textarea[type=text]{
 
 /* 左下のtextarea */
 .leftdown-textarea {
-  width: 100px;
-  height: 50px;
-  font-size: 16px;
+  height: 52px;
+  font-size: 14px;
 }
 
 #present-you-like {
+  width: 100px;
   left: 307px;
   top: 675px;
 }
 #want-to-challenge {
+  width: 130px;
   left: 415px;
   top: 675px;
 }
 #present-you-want {
+  width: 100px;
   left: 355px;
   top: 748px;
 }
 #good-memory {
+  width: 115px;
   left: 458px;
   top: 748px;
 }
@@ -521,7 +514,7 @@ textarea[type=text]{
   width: 116px;
   height: 50px;
   font-size: 16px;
-  top: 55px;
+  top: 58px;
 }
 
 #if-reborn {
@@ -708,23 +701,23 @@ textarea[type=text]{
 }
 
 #image-handsome {
-  left: 913px;
-  top: 483px;
+  left: 918px;
+  top: 485px;
 }
 #image-kawaii {
-  left: 1005px;
-  top: 483px;
+  left: 1009px;
+  top: 485px;
 }
 #image-funny {
-  left: 913px;
-  top: 542px;
+  left: 918px;
+  top: 543px;
 }
 #image-tennen {
-  left: 1005px;
-  top: 542px;
+  left: 1009px;
+  top: 543px;
 }
 #image-fashionable {
-  left: 913px;
+  left: 918px;
   top: 601px;
 }
 
