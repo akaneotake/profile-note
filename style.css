@@ -174,7 +174,6 @@ input {
   font-family: "Yomogi", cursive;
   font-size: 20px;
   font-weight: bold;
-  /* padding関係ある？ */
   padding: 0;
   padding-block: 0 !important; 
   padding-inline: 0 !important;
@@ -190,7 +189,6 @@ textarea {
   font-weight: bold;
   line-height: 1 !important;
   overflow:hidden;
-  /* padding関係ある？ */
   padding: 0;
 }
 
@@ -315,8 +313,8 @@ textarea {
   top: 90px;
 }
 #blood-type {
-  width: 28px;
-  left: 144px;
+  width: 35px;
+  left: 139px;
   top: 119px;
 }
 #nickname {
@@ -349,7 +347,8 @@ textarea {
 
 /* 左上textarea */
 .leftup-textarea {
-  width: 145px;
+  /* これで変わる？ */
+  width: 145px !important;
   height: 45px;
 }
 
@@ -722,7 +721,8 @@ textarea {
 
 /* 右下textarea(フリースペース) */
 #free-space {
-  width: 500px;
+  /* これで変わる？ */
+  width: 500px !important;
   height: 125px;
   left: 603px;
   top: 688px;
