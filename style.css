@@ -246,6 +246,7 @@ textarea {
 .select-button-active {
   border: solid 2px;
   border-radius: 10px;
+  border-color: gray;
 }
 
 /* ----ここから入力部分のCSS---- */
@@ -274,18 +275,18 @@ textarea {
 
 /* 左上input */
 #date-year {
-  width: 37px;
-  left: 418px;
+  width: 60px;
+  left: 410px;
   top: 21px;
 }
 #date-month {
-  width: 20px;
-  left: 478px;
+  width: 30px;
+  left: 475px;
   top: 21px;
 }
 #date-day {
-  width: 20px;
-  left: 520px;
+  width: 30px;
+  left: 515px;
   top: 21px;
 }
 #username {
@@ -294,18 +295,18 @@ textarea {
   top: 62px;
 }
 #birth-year {
-  width: 45px;
-  left: 79px;
+  width: 55px;
+  left: 76px;
   top: 90px;
 }
 #birth-month {
-  width: 20px;
-  left: 143px;
+  width: 30px;
+  left: 142px;
   top: 90px;
 }
 #birth-day {
-  width: 20px;
-  left: 188px;
+  width: 30px;
+  left: 185px;
   top: 90px;
 }
 #constellation {

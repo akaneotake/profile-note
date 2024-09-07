@@ -98,9 +98,11 @@ function checkFontWeight(event) {
   if (checkbox.checked) {
     $('input').css('font-weight', 'normal');
     $('textarea').css('font-weight', 'normal');
+    $('.select-button-active').css('border', 'solid 1px gray');
   } else {
     $('input').css('font-weight', 'bold');
     $('textarea').css('font-weight', 'bold');
+    $('.select-button-active').css('border', 'solid 2px gray');
   };
 };
 
