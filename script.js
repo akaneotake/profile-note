@@ -148,6 +148,9 @@ function rowsLimit(event) {
   const rows = textarea.value.split(/\r|\r\n|\n/);
   const rowsCount = rows.length;
 
+  // 一行分の文字数に達したら改行文字入れる
+ 
+  // 行数制限に達したら改行できないようにする
   if (textarea.id === 'free-space') {
     if (rowsCount === 6 && event.key === 'Enter') {
       event.preventDefault();
@@ -162,55 +165,6 @@ function rowsLimit(event) {
     };
   };  
 };
-
-// textareaへの文字入力量によってフォントサイズ変更
-//function resizeTextarea(event) {
-  //const textarea = event.target;
-  //let size = 20;
-  //let sizeS = 16;
-
-  //if (textarea.classList.contains('image-game-textarea')) {
-    //if(textarea.offsetHeight < textarea.scrollHeight) {
-      //for (
-        //sizeS;
-        //textarea.offsetHeight < textarea.scrollHeight;
-        //sizeS -= 1
-      //) {
-        //textarea.style.fontSize = sizeS + "px";
-      //};    
-    //} else if (textarea.value === '') {
-      //size = 16;
-      //textarea.style.fontSize = sizeS + "px";
-    //};
-  //} else {
-    //if(textarea.offsetHeight < textarea.scrollHeight) {
-      //for (
-        //size;
-        //textarea.offsetHeight < textarea.scrollHeight;
-        //size -= 1
-      //) {
-        //textarea.style.fontSize = size + "px";
-      //};    
-    //} else if (textarea.value === '') {
-      //size = 20;
-      //textarea.style.fontSize = size + "px";
-    //};
-  //};
-//};
-
-// textareaに改行させる
-//function lineBreakTextarea(event) {
-  //const textarea = event.target;
-  //const textLength = textarea.value.length;
-  //const width = textarea.clientWidth;
-  //const letters = 7;
-  //const fontSize = getComputedStyle(textarea).fontSize.replace('px', ''); 
-  
-  //if ((fontSize * (textLength + 1)) > width && textLength % letters == 0) {
-    //textarea.value += "\r\n";
-    //console.log('改行文字追加しました');
-  //}
-//};
 
 // アイコン画像のプレビュー表示
 function showIconPreview(event) {
@@ -287,21 +241,13 @@ window.onload = function() {
   // rowsLimit関数 (textarea)
   const textarea = document.querySelectorAll('textarea');
   textarea.forEach(function(e) {
-    e.addEventListener('input', rowsLimit);
+    e.addEventListener('keydown', rowsLimit);
   });
 
-  // resizeTextarea関数 (textarea)
-  //const textarea = document.querySelectorAll('textarea');
-  //textarea.forEach(function(e) {
-    //e.addEventListener('input', resizeTextarea);
-  //});
-
-  // lineBreakTextarea関数(textarea)
-  //textarea.forEach(function(e) {
-    //e.addEventListener('keyup', lineBreakTextarea);
-  //});
-
-  // showIconPreview関数
+  // ☆彡テスト
+  $('.mob').keydown(rowsLimit);
+  
+    // showIconPreview関数
   const iconChoose = document.getElementById('user-icon-choose');
   iconChoose.addEventListener('change', showIconPreview);
 

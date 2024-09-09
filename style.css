@@ -192,6 +192,20 @@ textarea {
   padding: 0;
 }
 
+/* ☆彡textareaの代わりにcontenteditable="true"でプレビュー正しく表示されるかテスト */
+.mob {
+  position: absolute;
+  resize: none;
+  border: none;
+  background-color: transparent;
+  font-family: "Yomogi", cursive;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1 !important;
+  overflow: hidden;
+  padding: 0;
+}
+
 /* input・小さい文字用 */
 .font15px {
   font-size: 15px;

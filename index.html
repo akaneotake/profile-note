@@ -158,7 +158,9 @@
       <input id="instagram" class="font15px" type="text" name="instagram" placeholder="@インスタ">
 
       <!-- 左上のtextarea -->
-      <textarea id="hobby" class="leftup-textarea" placeholder="ここに趣味をかいてね" maxlength="27"></textarea>
+      <!-- ☆彡textareaの代わりにcontenteditable="true"でプレビュー正しく表示されるかテ☆彡☆彡 -->
+      <div contenteditable="true" id="hobby" class="mob leftup-textarea">ここに趣味をかいてね</div>
+      <!--<textarea id="hobby" class="leftup-textarea" placeholder="ここに趣味をかいてね" maxlength="27" rows="3" cols="9"></textarea>-->
       <textarea id="skill" class="leftup-textarea" placeholder="ここに特技をかいてね" maxlength="27"></textarea>
       <textarea id="boom" class="leftup-textarea" placeholder="ここにマイブームをかいてね" maxlength="27"></textarea>
       <textarea id="occupation" class="leftup-textarea" placeholder="ここに職業や肩書をかいてね" maxlength="27"></textarea>
