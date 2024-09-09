@@ -142,57 +142,74 @@ function resizeInput(event) {
   };
 };
 
-// textareaへの文字入力量によってフォントサイズ変更
-function resizeTextarea(event) {
+// textareaの行数制限
+function rowsLimit(event) {
   const textarea = event.target;
-  let size = 20;
-  let sizeS = 16;
+  const rows = textarea.value.split(/\r|\r\n|\n/);
+  const rowsCount = rows.length;
 
-  if (textarea.classList.contains('image-game-textarea')) {
-    if(textarea.offsetHeight < textarea.scrollHeight) {
-      for (
-        sizeS;
-        textarea.offsetHeight < textarea.scrollHeight;
-        sizeS -= 1
-      ) {
-        textarea.style.fontSize = sizeS + "px";
-      };    
-    } else if (textarea.value === '') {
-      size = 16;
-      textarea.style.fontSize = sizeS + "px";
+  if (textarea.id === 'free-space') {
+    if (rowsCount === 6 && event.key === 'Enter') {
+      event.preventDefault();
+    };
+  } else if (textarea.classList.contains('image-game-textarea')) {
+    if (rowsCount === 2 && event.key === 'Enter') {
+      event.preventDefault();
     };
   } else {
-    if(textarea.offsetHeight < textarea.scrollHeight) {
-      for (
-        size;
-        textarea.offsetHeight < textarea.scrollHeight;
-        size -= 1
-      ) {
-        textarea.style.fontSize = size + "px";
-      };    
-    } else if (textarea.value === '') {
-      size = 20;
-      textarea.style.fontSize = size + "px";
+    if (rowsCount === 3 && event.key === 'Enter') {  
+      event.preventDefault();
     };
-  };
+  };  
 };
+
+// textareaへの文字入力量によってフォントサイズ変更
+//function resizeTextarea(event) {
+  //const textarea = event.target;
+  //let size = 20;
+  //let sizeS = 16;
+
+  //if (textarea.classList.contains('image-game-textarea')) {
+    //if(textarea.offsetHeight < textarea.scrollHeight) {
+      //for (
+        //sizeS;
+        //textarea.offsetHeight < textarea.scrollHeight;
+        //sizeS -= 1
+      //) {
+        //textarea.style.fontSize = sizeS + "px";
+      //};    
+    //} else if (textarea.value === '') {
+      //size = 16;
+      //textarea.style.fontSize = sizeS + "px";
+    //};
+  //} else {
+    //if(textarea.offsetHeight < textarea.scrollHeight) {
+      //for (
+        //size;
+        //textarea.offsetHeight < textarea.scrollHeight;
+        //size -= 1
+      //) {
+        //textarea.style.fontSize = size + "px";
+      //};    
+    //} else if (textarea.value === '') {
+      //size = 20;
+      //textarea.style.fontSize = size + "px";
+    //};
+  //};
+//};
 
 // textareaに改行させる
 //function lineBreakTextarea(event) {
-  //let textareaValue = event.target.value;
-  //const low = 7;
-
-  //if (textareaValue.length % low == 0) {
-    //console.log("改行チャンス");
-    //const splitText = textareaValue.split('');
-    //splitText.push("改");
-    //const newText = splitText.join('');
-    //console.log("新しいテキスト =" + newText);
-    //event.target.value = newText;
-    //console.log(event.target.value);
+  //const textarea = event.target;
+  //const textLength = textarea.value.length;
+  //const width = textarea.clientWidth;
+  //const letters = 7;
+  //const fontSize = getComputedStyle(textarea).fontSize.replace('px', ''); 
+  
+  //if ((fontSize * (textLength + 1)) > width && textLength % letters == 0) {
+    //textarea.value += "\r\n";
+    //console.log('改行文字追加しました');
   //}
-
-  //textarea.value.replace(/\r?\n/g, "\r\n");
 //};
 
 // アイコン画像のプレビュー表示
@@ -267,15 +284,21 @@ window.onload = function() {
     e.addEventListener('input', resizeInput);
   });
 
-  // resizeTextarea関数 (textarea)
+  // rowsLimit関数 (textarea)
   const textarea = document.querySelectorAll('textarea');
   textarea.forEach(function(e) {
-    e.addEventListener('input', resizeTextarea);
+    e.addEventListener('input', rowsLimit);
   });
+
+  // resizeTextarea関数 (textarea)
+  //const textarea = document.querySelectorAll('textarea');
+  //textarea.forEach(function(e) {
+    //e.addEventListener('input', resizeTextarea);
+  //});
 
   // lineBreakTextarea関数(textarea)
   //textarea.forEach(function(e) {
-    //e.addEventListener('input', lineBreakTextarea);
+    //e.addEventListener('keyup', lineBreakTextarea);
   //});
 
   // showIconPreview関数

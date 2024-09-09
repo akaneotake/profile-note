@@ -188,8 +188,7 @@ textarea {
   font-size: 20px;
   font-weight: bold;
   line-height: 1 !important;
-  /* これ指定して文字折り返すか確認 */
-  overflow: auto;
+  overflow: hidden;
   padding: 0;
 }
 
@@ -348,9 +347,9 @@ textarea {
 
 /* 左上textarea */
 .leftup-textarea {
-  /* これで変わる？ */
-  max-width: 145px !important;
-  height: 45px;
+  width: 145px;
+  height: 50px;
+  font-size: 16px;
 }
 
 #hobby {
@@ -486,6 +485,7 @@ textarea {
 /* 左下のtextarea */
 .leftdown-textarea {
   height: 52px;
+  font-size: 16px;
 }
 
 #present-you-like {
@@ -514,6 +514,7 @@ textarea {
   width: 100px;
   height: 50px;
   top: 58px;
+  font-size: 16px;
 }
 
 #if-reborn {
@@ -722,11 +723,11 @@ textarea {
 
 /* 右下textarea(フリースペース) */
 #free-space {
-  /* これで変わる？ */
-  width: 500px !important;
+  width: 500px;
   height: 125px;
   left: 603px;
   top: 688px;
+  font-size: 20px;
 }
 
 /* プレビュー＆ダウンロードボタン */
