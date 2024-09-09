@@ -177,6 +177,12 @@ function resizeTextarea(event) {
   };
 };
 
+// textareaに改行させる
+function lineBreakTextarea(event) {
+  const textarea = event.target;
+  textarea.value.replace(/\r?\n/g, "\r\n");
+};
+
 // アイコン画像のプレビュー表示
 function showIconPreview(event) {
   const file = event.target.files;
@@ -253,6 +259,11 @@ window.onload = function() {
   const textarea = document.querySelectorAll('textarea');
   textarea.forEach(function(e) {
     e.addEventListener('input', resizeTextarea);
+  });
+
+  // lineBreakTextarea関数(textarea)
+  textarea.forEach(function(e) {
+    e.addEventListener('change', lineBreakTextarea);
   });
 
   // showIconPreview関数
