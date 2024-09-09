@@ -179,7 +179,19 @@ function resizeTextarea(event) {
 
 // textareaに改行させる
 //function lineBreakTextarea(event) {
-  //const textarea = event.target;
+  //let textareaValue = event.target.value;
+  //const low = 7;
+
+  //if (textareaValue.length % low == 0) {
+    //console.log("改行チャンス");
+    //const splitText = textareaValue.split('');
+    //splitText.push("改");
+    //const newText = splitText.join('');
+    //console.log("新しいテキスト =" + newText);
+    //event.target.value = newText;
+    //console.log(event.target.value);
+  //}
+
   //textarea.value.replace(/\r?\n/g, "\r\n");
 //};
 

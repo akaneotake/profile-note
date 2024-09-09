@@ -349,7 +349,7 @@ textarea {
 /* 左上textarea */
 .leftup-textarea {
   /* これで変わる？ */
-  width: 145px !important;
+  max-width: 145px !important;
   height: 45px;
 }
 
