@@ -188,7 +188,8 @@ textarea {
   font-size: 20px;
   font-weight: bold;
   line-height: 1 !important;
-  overflow:hidden;
+  /* これ指定して文字折り返すか確認 */
+  overflow: auto;
   padding: 0;
 }
 

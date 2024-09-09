@@ -178,10 +178,10 @@ function resizeTextarea(event) {
 };
 
 // textareaに改行させる
-function lineBreakTextarea(event) {
-  const textarea = event.target;
-  textarea.value.replace(/\r?\n/g, "\r\n");
-};
+//function lineBreakTextarea(event) {
+  //const textarea = event.target;
+  //textarea.value.replace(/\r?\n/g, "\r\n");
+//};
 
 // アイコン画像のプレビュー表示
 function showIconPreview(event) {
@@ -262,9 +262,9 @@ window.onload = function() {
   });
 
   // lineBreakTextarea関数(textarea)
-  textarea.forEach(function(e) {
-    e.addEventListener('change', lineBreakTextarea);
-  });
+  //textarea.forEach(function(e) {
+    //e.addEventListener('input', lineBreakTextarea);
+  //});
 
   // showIconPreview関数
   const iconChoose = document.getElementById('user-icon-choose');
