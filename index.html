@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 minimum-scale=1, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>画面上で書けるプロフィール帳</title>
 
     <!-- Google フォント -->
@@ -133,7 +133,7 @@
       <button id="right" class="select-button" type="button" name="right" value=""></button>
 
       <!-- 左上input -->
-      <input id="date-year" type="text" name="date-year" placeholder="年">
+      <input id="date-year" type="text" name="date-year" placeholder=" 西暦">
       <input id="date-month" type="text" name="date-month" placeholder="月">
       <input id="date-day" type="text" name="date-day" placeholder="日">
       
@@ -144,10 +144,10 @@
       <input id="birth-day" type="text" name="birth-day" placeholder="何">
       <input id="constellation" type="text" name="constellation" placeholder=" 星">
 
-      <input id="blood-type" type="text" name="blood-type" placeholder="何">
-      <input id="nickname" type="text" name="nickname" placeholder="あだ名">
-      <input id="character" type="text" name="character" placeholder="こんな感じ">
-      <input id="day-off" type="text" name="day-off" placeholder="こーんなこと">
+      <input id="blood-type" type="text" name="blood-type" placeholder=" 何">
+      <input id="nickname" type="text" name="nickname" placeholder=" あだ名">
+      <input id="character" type="text" name="character" placeholder=" こんな感じ">
+      <input id="day-off" type="text" name="day-off" placeholder=" こーんなこと">
 
       <!-- アイコン画像アップロード --> 
       <div id="user-icon-preview"></div>    
@@ -158,85 +158,85 @@
       <input id="instagram" class="font15px" type="text" name="instagram" placeholder="@インスタ">
 
       <!-- 左上のtextarea -->
-      <div contenteditable="true" id="hobby" class="textarea leftup-textarea">ここに趣味をかいてね</div>
-      <div contenteditable="true" id="skill" class="textarea leftup-textarea">ここに特技をかいてね</div>
-      <div contenteditable="true" id="boom" class="textarea leftup-textarea">ここにマイブームをかいてね</div>
-      <div contenteditable="true" id="occupation" class="textarea leftup-textarea">ここに職業や肩書をかいてね</div>
+      <div contenteditable="true" id="hobby" class="textarea leftup-textarea"></div>
+      <div contenteditable="true" id="skill" class="textarea leftup-textarea"></div>
+      <div contenteditable="true" id="boom" class="textarea leftup-textarea"></div>
+      <div contenteditable="true" id="occupation" class="textarea leftup-textarea"></div>
 
       <!-- 左上右のinput -->
-      <input id="birthplace" class="leftup-input" type="text" name="birthplace" placeholder="出身地">
-      <input id="siblings" class="leftup-input" type="text" name="siblings" placeholder="兄弟構成">
-      <input id="user-height" class="leftup-input" type="text" name="user-height" placeholder="身長">
-      <input id="shoe-size" class="leftup-input" type="text" name="shoe-size" placeholder="靴のサイズ">
+      <input id="birthplace" class="leftup-input" type="text" name="birthplace" placeholder="">
+      <input id="siblings" class="leftup-input" type="text" name="siblings" placeholder="">
+      <input id="user-height" class="leftup-input" type="text" name="user-height" placeholder="">
+      <input id="shoe-size" class="leftup-input" type="text" name="shoe-size" placeholder="">
 
       <!-- 左中のinput -->
-      <input id="feel-adult" class="leftmiddle-input" type="text" name="feel-adult" placeholder="大人になったなぁ～">
-      <input id="feel-happy" class="leftmiddle-input" type="text" name="feel-happy" placeholder="幸せだなぁ～">
-      <input id="favorit-word" class="leftmiddle-input" type="text" name="favorit-word" placeholder="座右の銘・好きな言葉">
+      <input id="feel-adult" class="leftmiddle-input" type="text" name="feel-adult" placeholder="">
+      <input id="feel-happy" class="leftmiddle-input" type="text" name="feel-happy" placeholder="">
+      <input id="favorit-word" class="leftmiddle-input" type="text" name="favorit-word" placeholder="">
 
       <!-- 左中のinput(My favorites, 文字小) -->
-      <input id="f-food" class="leftmiddle-my-favorites font15px" type="text" name="f-food" placeholder="好きな食べ物">
-      <input id="f-drink" class="leftmiddle-my-favorites font15px" type="text" name="f-drink" placeholder="好きな飲み物">
-      <input id="f-place" class="leftmiddle-my-favorites font15px" type="text" name="f-place" placeholder="好きな場所">
-      <input id="f-character" class="leftmiddle-my-favorites font15px" type="text" name="f-character" placeholder="好きなキャラ">
+      <input id="f-food" class="leftmiddle-my-favorites font15px" type="text" name="f-food" placeholder="">
+      <input id="f-drink" class="leftmiddle-my-favorites font15px" type="text" name="f-drink" placeholder="">
+      <input id="f-place" class="leftmiddle-my-favorites font15px" type="text" name="f-place" placeholder="">
+      <input id="f-character" class="leftmiddle-my-favorites font15px" type="text" name="f-character" placeholder="">
 
-      <input id="f-color" class="leftmiddle-my-favorites font15px" type="text" name="f-color" placeholder="好きな色">
-      <input id="f-pattern" class="leftmiddle-my-favorites font15px" type="text" name="f-pattern" placeholder="好きな模様">
-      <input id="f-fragrance" class="leftmiddle-my-favorites font15px" type="text" name="f-fragrance" placeholder="好きな香り">
-      <input id="f-brand" class="leftmiddle-my-favorites font15px" type="text" name="f-brand" placeholder="好きなブランド">
+      <input id="f-color" class="leftmiddle-my-favorites font15px" type="text" name="f-color" placeholder="">
+      <input id="f-pattern" class="leftmiddle-my-favorites font15px" type="text" name="f-pattern" placeholder="">
+      <input id="f-fragrance" class="leftmiddle-my-favorites font15px" type="text" name="f-fragrance" placeholder="">
+      <input id="f-brand" class="leftmiddle-my-favorites font15px" type="text" name="f-brand" placeholder="">
 
-      <input id="f-animal" class="leftmiddle-my-favorites font15px" type="text" name="f-animal" placeholder="好きな動物">
-      <input id="f-sports" class="leftmiddle-my-favorites font15px" type="text" name="f-sports" placeholder="好きなスポーツ">
-      <input id="f-music" class="leftmiddle-my-favorites font15px" type="text" name="f-music" placeholder="好きな音楽">
-      <input id="f-book" class="leftmiddle-my-favorites font15px" type="text" name="f-book" placeholder="好きな本">
+      <input id="f-animal" class="leftmiddle-my-favorites font15px" type="text" name="f-animal" placeholder="">
+      <input id="f-sports" class="leftmiddle-my-favorites font15px" type="text" name="f-sports" placeholder="">
+      <input id="f-music" class="leftmiddle-my-favorites font15px" type="text" name="f-music" placeholder="">
+      <input id="f-book" class="leftmiddle-my-favorites font15px" type="text" name="f-book" placeholder="">
 
       <!-- 左下のinput(BEST3, 文字大) -->
-      <input id="best3-thema" type="text" name="best3-thema" placeholder="ベスト3">
-      <input id="best3-1" class="leftdown-best3" type="text" name="best3-1" placeholder="1位♡">
-      <input id="best3-2" class="leftdown-best3" type="text" name="best3-2" placeholder="2位♡">
-      <input id="best3-3" class="leftdown-best3" type="text" name="best3-3" placeholder="3位♡">
+      <input id="best3-thema" type="text" name="best3-thema" placeholder="">
+      <input id="best3-1" class="leftdown-best3" type="text" name="best3-1" placeholder="">
+      <input id="best3-2" class="leftdown-best3" type="text" name="best3-2" placeholder="">
+      <input id="best3-3" class="leftdown-best3" type="text" name="best3-3" placeholder="">
 
       <!-- 左下のtextarea -->
-      <div contenteditable="true" id="present-you-like" class="textarea leftdown-textarea">プレゼントが嬉しい</div>
-      <div contenteditable="true" id="want-to-challenge" class="textarea leftdown-textarea">チャレンジしたい</div>
-      <div contenteditable="true" id="present-you-want" class="textarea leftdown-textarea">欲しいものはこれ</div>
-      <div contenteditable="true" id="good-memory" class="textarea leftdown-textarea">楽しかった思い出</div>
+      <div contenteditable="true" id="present-you-like" class="textarea leftdown-textarea"></div>
+      <div contenteditable="true" id="want-to-challenge" class="textarea leftdown-textarea"></div>
+      <div contenteditable="true" id="present-you-want" class="textarea leftdown-textarea"></div>
+      <div contenteditable="true" id="good-memory" class="textarea leftdown-textarea"></div>
 
       <!-- 右上のtextarea(if) -->
-      <div contenteditable="true" id="if-reborn" class="textarea rightup-textarea">何になりたい？</div>
-      <div contenteditable="true" id="if-magic" class="textarea rightup-textarea">魔法が使えたら？</div>
-      <div contenteditable="true" id="if-a-month-free" class="textarea rightup-textarea">1ヵ月休みなら？</div>
-      <div contenteditable="true" id="if-3million" class="textarea rightup-textarea">300万あったら？</div>
+      <div contenteditable="true" id="if-reborn" class="textarea rightup-textarea"></div>
+      <div contenteditable="true" id="if-magic" class="textarea rightup-textarea"></div>
+      <div contenteditable="true" id="if-a-month-free" class="textarea rightup-textarea"></div>
+      <div contenteditable="true" id="if-3million" class="textarea rightup-textarea"></div>
 
       <!-- 右中のinput(My favorites+) -->
-      <input id="onigiri" class="rightmiddle-input" type="text" name="onigiri" placeholder="おにぎり">
-      <input id="sushi" class="rightmiddle-input" type="text" name="sushi" placeholder="お寿司">
-      <input id="pudding" class="rightmiddle-input" type="text" name="pudding" placeholder="プリン硬さ">
-      <input id="tamagoyaki" class="rightmiddle-input" type="text" name="tamagoyaki" placeholder="卵焼き">
+      <input id="onigiri" class="rightmiddle-input" type="text" name="onigiri" placeholder="">
+      <input id="sushi" class="rightmiddle-input" type="text" name="sushi" placeholder="">
+      <input id="pudding" class="rightmiddle-input" type="text" name="pudding" placeholder="">
+      <input id="tamagoyaki" class="rightmiddle-input" type="text" name="tamagoyaki" placeholder="">
 
-      <input id="ramen" class="rightmiddle-input" type="text" name="ramen" placeholder="ラーメン">
-      <input id="curry" class="rightmiddle-input" type="text" name="curry" placeholder="カレー辛さ">
-      <input id="alcohol" class="rightmiddle-input" type="text" name="alcohol" placeholder="お酒">
-      <input id="otsumami" class="rightmiddle-input" type="text" name="otsumami" placeholder="おつまみ">
+      <input id="ramen" class="rightmiddle-input" type="text" name="ramen" placeholder="">
+      <input id="curry" class="rightmiddle-input" type="text" name="curry" placeholder="">
+      <input id="alcohol" class="rightmiddle-input" type="text" name="alcohol" placeholder="">
+      <input id="otsumami" class="rightmiddle-input" type="text" name="otsumami" placeholder="">
 
-      <input id="nabe" class="rightmiddle-input" type="text" name="nabe" placeholder="鍋">
-      <input id="misosiru" class="rightmiddle-input" type="text" name="misosiru" placeholder="みそ汁">
-      <input id="oden" class="rightmiddle-input" type="text" name="oden" placeholder="おでん">
-      <input id="pizza" class="rightmiddle-input" type="text" name="pizza" placeholder="ピザの厚さ">
+      <input id="nabe" class="rightmiddle-input" type="text" name="nabe" placeholder="">
+      <input id="misosiru" class="rightmiddle-input" type="text" name="misosiru" placeholder="">
+      <input id="oden" class="rightmiddle-input" type="text" name="oden" placeholder="">
+      <input id="pizza" class="rightmiddle-input" type="text" name="pizza" placeholder="">
 
-      <input id="anko" class="rightmiddle-input" type="text" name="anko" placeholder="あんこ">
-      <input id="taiyaki" class="rightmiddle-input" type="text" name="taiyaki" placeholder="たいやき">
-      <input id="medamayaki" class="rightmiddle-input" type="text" name="medamayaki" placeholder="目玉焼き">
-      <input id="tonkatsu" class="rightmiddle-input" type="text" name="tonkatsu" placeholder="とんかつ">
+      <input id="anko" class="rightmiddle-input" type="text" name="anko" placeholder="">
+      <input id="taiyaki" class="rightmiddle-input" type="text" name="taiyaki" placeholder="">
+      <input id="medamayaki" class="rightmiddle-input" type="text" name="medamayaki" placeholder="">
+      <input id="tonkatsu" class="rightmiddle-input" type="text" name="tonkatsu" placeholder="">
 
-      <input id="not-favorite-food" type="text" name="not-favorite-food" placeholder="苦手なたべもの">
-      <input id="last-food" type="text" name="last-food" placeholder="最後の晩餐">
+      <input id="not-favorite-food" type="text" name="not-favorite-food" placeholder="">
+      <input id="last-food" type="text" name="last-food" placeholder="">
 
       <!-- 右・選択肢 -->
       <button id="dog" class="select-button" type="button" name="dog" value=""></button>
       <button id="cat" class="select-button" type="button" name="cat" value=""></button>
 
-      <input id="another-animal" class="font15px" type="text" name="another-animal" placeholder="他の動物">
+      <input id="another-animal" class="font15px" type="text" name="another-animal" placeholder="">
 
       <button id="indoor" class="select-button" type="button" name="indoor" value=""></button>
       <button id="outdoor" class="select-button" type="button" name="outdoor" value=""></button>
@@ -252,14 +252,14 @@
       <button id="furusato-nouzei-no" class="select-button" type="button" name="furusato-nouzei-no" value=""></button>
 
       <!-- 右下textarea(れんそうゲーム) -->
-      <div contenteditable="true" id="image-handsome" class="textarea image-game-textarea">イケメン</div>
-      <div contenteditable="true" id="image-kawaii" class="textarea image-game-textarea">キュート</div>
-      <div contenteditable="true" id="image-funny" class="textarea image-game-textarea">おもろい</div>
-      <div contenteditable="true" id="image-tennen" class="textarea image-game-textarea">ボケてる</div>
-      <div contenteditable="true" id="image-fashionable" class="textarea image-game-textarea">しゃれおつ</div>
+      <div contenteditable="true" id="image-handsome" class="textarea image-game-textarea"></div>
+      <div contenteditable="true" id="image-kawaii" class="textarea image-game-textarea"></div>
+      <div contenteditable="true" id="image-funny" class="textarea image-game-textarea"></div>
+      <div contenteditable="true" id="image-tennen" class="textarea image-game-textarea"></div>
+      <div contenteditable="true" id="image-fashionable" class="textarea image-game-textarea"></div>
 
       <!-- 右下textarea(フリースペース) -->
-      <div contenteditable="true" id="free-space" class="textarea">最後にメッセージを書いてね♡</div>
+      <div contenteditable="true" id="free-space" class="textarea"></div>
 
     </div>
 

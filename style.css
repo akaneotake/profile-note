@@ -750,8 +750,14 @@ input {
   top: 4px;
 }
 
+#download-btn {
+  margin-bottom: 100px;
+}
+
 #preview {
   display: none;
+  width: 1170px;
+  height: 845px;
 }
 
 #img-link {
