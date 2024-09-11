@@ -51,20 +51,38 @@ h1 span {
 }
 
 /* 使い方の説明 */
-#description-wrapper {
+details {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+summary {
+  border: 1px solid rgb(223, 110, 223);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+summary::marker {
+  color: rgb(223, 110, 223);
+}
+
+.description-wrapper {
+  text-align: left;
   margin-bottom: 30px;
 }
 
-#description-wrapper li {
+.description-wrapper li {
   list-style-type: none !important;
 }
 
-#description-wrapper li span {
+.description-wrapper li span {
   border-bottom: dashed 2px rgb(223, 110, 223);
   line-height: 1.9em;
 }
 
-#description-wrapper li span:before {
+.description-wrapper li span:before {
   font-family: "Font Awesome 5 Free";
   content: "\f004";
   position: absolute;
@@ -105,13 +123,13 @@ select {
     font-size: 28px;
     padding: 10px;
   }
-  #description-wrapper {
+  .description-wrapper {
     width: 90vw;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 30px;
   }
-  #description-wrapper li span:before {
+  .description-wrapper li span:before {
     left: 3em;
   }  
 }
@@ -125,10 +143,16 @@ select {
     font-size: 26px;
     padding: 10px;
   }
-  #description-wrapper {
+  #description-large {
+    display: none;
+  }
+  details {
+    display: block;
+  }
+  .description-wrapper {
     margin-bottom: 20px;
   }
-  #description-wrapper li span {
+  .description-wrapper li span {
     font-size: 13px;
     line-height: 1.8rem;
   }
@@ -751,7 +775,7 @@ input {
 }
 
 #download-btn {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 #preview {
