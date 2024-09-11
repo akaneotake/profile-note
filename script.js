@@ -35,6 +35,10 @@ function selectFont(event) {
       $('input').css('font-family', '"Slackside One", cursive');
       $('.textarea').css('font-family', '"Slackside One", cursive');
       break;
+    case 'mirror':
+      $('input').css('font-family', '"鏡文字ゴシック", serif');
+      $('.textarea').css('font-family', '"鏡文字ゴシック", serif');
+      break;
     default:
       $('input').css('font-family', '"Yomogi", cursive');
       $('.textarea').css('font-family', '"Yomogi", cursive');

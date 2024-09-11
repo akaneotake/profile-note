@@ -91,6 +91,13 @@ summary::marker {
 }
 
 /* タイポグラフィ変更 */
+@font-face
+{
+font-family: 鏡文字ゴシック;
+src: url('https://cdn.leafscape.be/mirrorfont/TTEditMirrorWritingGothic_web.woff2')
+     format("woff2");
+}
+
 .typography {
   display: flex;
 }
@@ -107,10 +114,10 @@ select {
   font-weight: bold;
 }
 
-#for-normal-font {
+.typography-checkbox {
   position: relative;
-  font-weight: normal;
   padding-left: 22px;
+  font-weight: normal;
   top: -1px; 
 }
 
