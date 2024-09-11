@@ -179,27 +179,13 @@ input {
   padding-inline: 0 !important;
 }
 
-textarea {
+.textarea {
   position: absolute;
   resize: none;
   border: none;
   background-color: transparent;
   font-family: "Yomogi", cursive;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1 !important;
-  overflow: hidden;
-  padding: 0;
-}
-
-/* ☆彡textareaの代わりにcontenteditable="true"でプレビュー正しく表示されるかテスト */
-.mob {
-  position: absolute;
-  resize: none;
-  border: none;
-  background-color: transparent;
-  font-family: "Yomogi", cursive;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   line-height: 1 !important;
   overflow: hidden;
@@ -499,7 +485,6 @@ textarea {
 /* 左下のtextarea */
 .leftdown-textarea {
   height: 52px;
-  font-size: 16px;
 }
 
 #present-you-like {
@@ -528,7 +513,6 @@ textarea {
   width: 100px;
   height: 50px;
   top: 58px;
-  font-size: 16px;
 }
 
 #if-reborn {
@@ -711,7 +695,6 @@ textarea {
 .image-game-textarea {
   width: 80px;
   height: 38px;
-  font-size: 16px;
 }
 
 #image-handsome {

@@ -5,39 +5,39 @@ function selectFont(event) {
   switch (fontSelect) {
     case 'hand-written':
       $('input').css('font-family', '"Yomogi", cursive');
-      $('textarea').css('font-family', '"Yomogi", cursive');
+      $('.textarea').css('font-family', '"Yomogi", cursive');
       break;
     case 'cute':
       $('input').css('font-family', '"Hachi Maru Pop", cursive');
-      $('textarea').css('font-family', '"Hachi Maru Pop", cursive');
+      $('.textarea').css('font-family', '"Hachi Maru Pop", cursive');
       break;
     case 'cool':
       $('input').css('font-family', '"Reggae One", system-ui');
-      $('textarea').css('font-family', '"Reggae One", system-ui');
+      $('.textarea').css('font-family', '"Reggae One", system-ui');
       break;
     case 'beautiful':
       $('input').css('font-family', '"Kaisei Tokumin", serif');
-      $('textarea').css('font-family', '"Kaisei Tokumin", serif');
+      $('.textarea').css('font-family', '"Kaisei Tokumin", serif');
       break;
     case 'powerful':
       $('input').css('font-family', '"Dela Gothic One", sans-serif');
-      $('textarea').css('font-family', '"Dela Gothic One", sans-serif');
+      $('.textarea').css('font-family', '"Dela Gothic One", sans-serif');
       break;
     case 'child':
       $('input').css('font-family', '"Darumadrop One", sans-serif');
-      $('textarea').css('font-family', '"Darumadrop One", sans-serif');
+      $('.textarea').css('font-family', '"Darumadrop One", sans-serif');
       break;
     case 'adult':
       $('input').css('font-family', '"Yuji Syuku", serif');
-      $('textarea').css('font-family', '"Yuji Syuku", serif');
+      $('.textarea').css('font-family', '"Yuji Syuku", serif');
       break;
     case 'dirty':
       $('input').css('font-family', '"Slackside One", cursive');
-      $('textarea').css('font-family', '"Slackside One", cursive');
+      $('.textarea').css('font-family', '"Slackside One", cursive');
       break;
     default:
       $('input').css('font-family', '"Yomogi", cursive');
-      $('textarea').css('font-family', '"Yomogi", cursive');
+      $('.textarea').css('font-family', '"Yomogi", cursive');
   };
 };
 
@@ -48,47 +48,47 @@ function selectColor(event) {
   switch (colorSelect) {
     case 'black':
       $('input').css('color', 'black');
-      $('textarea').css('color', 'black');
+      $('.textarea').css('color', 'black');
       break;
     case 'red':
       $('input').css('color', 'red');
-      $('textarea').css('color', 'red');
+      $('.textarea').css('color', 'red');
       break;
     case 'blue':
       $('input').css('color', 'blue');
-      $('textarea').css('color', 'blue');
+      $('.textarea').css('color', 'blue');
       break;
     case 'aqua':
       $('input').css('color', '#00BFFF');
-      $('textarea').css('color', '#00BFFF');
+      $('.textarea').css('color', '#00BFFF');
       break;
     case 'yellow':
       $('input').css('color', '#FFD700');
-      $('textarea').css('color', '#FFD700');
+      $('.textarea').css('color', '#FFD700');
       break;
     case 'green':
       $('input').css('color', 'green');
-      $('textarea').css('color', 'green');
+      $('.textarea').css('color', 'green');
       break;
     case 'lime':
       $('input').css('color', 'lime');
-      $('textarea').css('color', 'lime');
+      $('.textarea').css('color', 'lime');
       break;
     case 'purple':
       $('input').css('color', 'purple');
-      $('textarea').css('color', 'purple');
+      $('.textarea').css('color', 'purple');
       break;
     case 'orange':
       $('input').css('color', 'orange');
-      $('textarea').css('color', 'orange');
+      $('.textarea').css('color', 'orange');
       break;
     case 'pink':
       $('input').css('color', '#FF1493');
-      $('textarea').css('color', '#FF1493');
+      $('.textarea').css('color', '#FF1493');
       break;
     default:
       $('input').css('color', 'black');
-      $('textarea').css('color', 'black');
+      $('.textarea').css('color', 'black');
   };
 };
 
@@ -97,11 +97,11 @@ function checkFontWeight(event) {
   const checkbox = event.target;
   if (checkbox.checked) {
     $('input').css('font-weight', 'normal');
-    $('textarea').css('font-weight', 'normal');
+    $('.textarea').css('font-weight', 'normal');
     $('.select-button-active').css('border', 'solid 1px gray');
   } else {
     $('input').css('font-weight', 'bold');
-    $('textarea').css('font-weight', 'bold');
+    $('.textarea').css('font-weight', 'bold');
     $('.select-button-active').css('border', 'solid 2px gray');
   };
 };
@@ -140,30 +140,6 @@ function resizeInput(event) {
       input.style.fontSize = size + "px";
     };
   };
-};
-
-// textareaの行数制限
-function rowsLimit(event) {
-  const textarea = event.target;
-  const rows = textarea.value.split(/\r|\r\n|\n/);
-  const rowsCount = rows.length;
-
-  // 一行分の文字数に達したら改行文字入れる
- 
-  // 行数制限に達したら改行できないようにする
-  if (textarea.id === 'free-space') {
-    if (rowsCount === 6 && event.key === 'Enter') {
-      event.preventDefault();
-    };
-  } else if (textarea.classList.contains('image-game-textarea')) {
-    if (rowsCount === 2 && event.key === 'Enter') {
-      event.preventDefault();
-    };
-  } else {
-    if (rowsCount === 3 && event.key === 'Enter') {  
-      event.preventDefault();
-    };
-  };  
 };
 
 // アイコン画像のプレビュー表示
@@ -238,16 +214,7 @@ window.onload = function() {
     e.addEventListener('input', resizeInput);
   });
 
-  // rowsLimit関数 (textarea)
-  const textarea = document.querySelectorAll('textarea');
-  textarea.forEach(function(e) {
-    e.addEventListener('keydown', rowsLimit);
-  });
-
-  // ☆彡テスト
-  $('.mob').keydown(rowsLimit);
-  
-    // showIconPreview関数
+  // showIconPreview関数
   const iconChoose = document.getElementById('user-icon-choose');
   iconChoose.addEventListener('change', showIconPreview);
 
